@@ -2,3 +2,4 @@ node_modules
 .sass-cache
 .bowerrc
 bower.json
+assets/script/plugins

@@ -1,0 +1,8 @@
+/*!
+ * context.js Library associated with > v0.9.6.2 of intention.js
+ * http://intentionjs.com/
+ *
+ * Copyright 2011, 2013 Dowjones and other contributors
+ * Released under the MIT license
+ *
+ */(function(){"use strict";var e=function(e,t){function s(e,t){var n=new Date,r=null;return function(i){var s=new Date;if(s-n<t){r&&window.clearTimeout(r);var o=function(t){return function(){e(t)}};r=window.setTimeout(o(i),t);return!1}e(i);n=s}}var n=new t,r,i;n.responsive([{name:"base"}]).respond("base");r=n.responsive({ID:"width",contexts:[{name:"standard",min:992},{name:"tablet",min:753},{name:"mobile",min:0}],matcher:function(e,t){return typeof e=="string"?e===t.name:e>=t.min},measure:function(t){return typeof t=="string"?t:e(window).width()}});i=n.responsive({ID:"orientation",contexts:[{name:"portrait",rotation:0},{name:"landscape",rotation:90}],matcher:function(e,t){return e===t.rotation},measure:function(){var e=Math.abs(window.orientation);e>0&&(e=180-e);return e}});n.responsive({ID:"touch",contexts:[{name:"touch"}],matcher:function(){return"ontouchstart"in window}}).respond();n.responsive({ID:"highres",contexts:[{name:"highres"}],matcher:function(){return window.devicePixelRatio>1}}).respond();e(window).on("resize",s(r.respond,100)).on("orientationchange",r.respond).on("orientationchange",i.respond);r.respond();i.respond();e(function(){n.elements(document)});return n};(function(e,t){typeof define=="function"&&define.amd?define("context",["jquery","intention"],t):e.intent=t(e.jQuery,e.Intention)})(this,function(t,n){return e(t,n)})}).call(this);
