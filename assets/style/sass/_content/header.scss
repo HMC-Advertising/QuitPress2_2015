@@ -1,0 +1,361 @@
+/******************************
+= Header
+******************************/
+
+.header{
+	margin-bottom: 0;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	@extend %clearfix;
+
+	@include breakpoint(tablet) {
+		padding-bottom: 45px;
+	}
+}
+
+/******************************
+= Logo
+******************************/
+
+.logo{
+	float: left;
+	margin: 0; padding: 0;
+	font-size: 1em;
+	font-family: $font-header;
+
+	a{
+		color: $blue;
+		float: left;
+		width: 60px;
+
+		img{
+			display: block;
+			width: 100%; height: auto;
+		}
+	}
+
+	.logo-tagline{
+		float: left;
+		padding-top: 20px; padding-left: 5px;
+		display: inline-block;
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 1em;
+		line-height: 1em;
+	}
+
+	@include breakpoint(tablet) {
+		a{
+			width: 80px;
+		}
+
+		.logo-tagline{
+			padding-top: 1.125em;
+		}
+	}
+
+	@include breakpoint(desktop) {
+		a{
+			width: 110px;
+		}
+
+		.logo-tagline{
+			padding-top: 2em;
+		}
+	}
+
+	@include breakpoint(970px) {
+		padding-left: 2.625em;
+
+		a{
+			width: 138px;
+		}
+
+		.logo-tagline{
+			font-size: 1.875em;
+			padding-left: 0.25em;
+			padding-top: 1.625em;
+		}
+	}
+}
+
+/******************************
+= Mobile Nav butotn
+******************************/
+
+#nav-main-open{
+	display: block;
+	text-indent: -9999px;
+	float: right;
+	border: none;
+	outline: none;
+	width: 48px; height: 63px;
+	background: transparent url('img/icon-menu-button.png') 10px 10px no-repeat;
+	padding: 0; margin-top: 10px;
+
+	&.is-active{
+		background-color: $violet;
+		box-shadow: 8px 8px 0 #000;
+		background-position: -38px 10px;
+	}
+
+	@include breakpoint(tablet) {
+		display: none;
+	}
+}
+
+/******************************
+= Header Content Wrap
+******************************/
+
+.header-nav-wrap{
+	display: none;
+	position: absolute;
+	z-index: 99;
+	right: 10px; left: 10px; top: 88px;
+	background: $violet;
+	box-shadow: 8px 8px 0 #000;
+
+	&.is-active{
+		display: block;
+	}
+
+	@include breakpoint(tablet) {
+		display: block;
+		position: static;
+		width: auto; height: auto;
+		left: 0;
+		padding: 0.5em 0 0;
+		float: right;
+		border: none;
+		background: transparent;
+		box-shadow: none !important;
+	}
+}
+
+/******************************
+= Search Form
+******************************/
+
+.site-search{
+	display: none;
+}
+
+#search{
+	background: $gray-light;
+	border: none;
+	width: 100%; height: 24px;
+	line-height: 14px;
+	padding: 5px 8px;
+	border-radius: 4px;
+	font-size: 0.625em;
+
+	&:focus{
+		outline: none;
+	}
+}
+
+#submit{
+	position: absolute;
+	top: 12px; right: 8px;
+	display: block;
+	text-indent: -9999px;
+	border: none;
+	background: url('img/icon-search.jpg') 0 0 no-repeat;
+	width: 13px; height: 12px;
+}
+
+@include breakpoint(tablet) {
+	
+	.site-search{
+		display: block;
+		position: relative;
+		clear: both;
+		float: right;
+		width: auto;
+		max-width: 12.5em;
+		margin-top: 0;
+		margin-right: 0.325em;
+	}
+
+	#search{
+		vertical-align: top;
+	}
+
+	#submit{
+		top: 6px;
+	}
+}
+
+@include breakpoint(desktop) {
+
+	.site-search{
+		margin-right: 1em;
+	}
+}
+
+/******************************
+= Social Links
+******************************/
+
+.nav-social{
+	display: none;
+	clear: both;
+	@extend %clearfix;
+	text-align: center;
+	padding-left: 4.85em;
+	padding-top: 1.25em;
+
+	li{
+		float: left; margin: 0 1em 0 0;
+	}
+
+	a{
+		text-indent: -9999px;
+		display: block;
+		width: 22px; height: 23px;
+		background-color: $blue;
+		background-image: url('img/icon-social-sprite.png');
+		background-repeat: no-repeat;
+		border-radius: 4px;
+		@include transition(0.3s ease all);
+
+		&[href*='facebook'] {
+			background-position: 0 0;
+		}
+
+		&[href*='youtube'] {
+			background-position: -22px 0;
+		}
+
+		&[href*='share'] {
+			background-position: -44px 0;
+		}
+
+		&:hover{
+			background-color: $blue-light;
+		}
+	}
+
+	@include breakpoint(tablet) {
+		display: block;
+		padding-top: 0;
+		padding-right: 1em;
+		clear: none;
+		float: right;
+
+		li{
+			display: block;
+			float: left;
+			margin: 0 0 0 0.25em;
+		}
+	}
+
+	@include retina() {
+
+		a{
+			background-size: 66px 33px;
+
+			&[href*='facebook'] {
+				background-position: 0 -11px;
+			}
+
+			&[href*='youtube'] {
+				background-position: -22px -11px;
+			}
+
+			&[href*='share'] {
+				background-position: -44px -11px;
+			}
+		}
+	}
+}
+
+/******************************
+= Main Navigation
+******************************/
+
+.nav-main{
+	clear: both;
+	padding: 20px 0;
+	position: relative;
+
+	$divider-width: 76px;
+	&:before{
+		content: '';
+		display: block;
+		width: $divider-width; height: 5px;
+		background: $cyan;
+		position: absolute;
+		top: -3px; left: 50%;
+		margin-left: -$divider-width/2;
+	}
+
+	&.no-divider:before{ display: none; }
+
+	ul{
+		@extend %clearfix;
+	}
+
+	a{
+		display: block;
+		color: #fff;
+		font: normal 1.825em $font-header;
+		text-transform: uppercase;
+		text-align: center;
+		padding: 0.125em 0;
+	}
+
+	.current_page_item a{
+		color: $violet;
+		background: #fff;
+	}
+
+	@include breakpoint(tablet) {
+		float: right; clear: both;
+
+		&:before{ display: none; }
+
+		li{
+			float: left;
+			margin-left: 0;
+
+			&:first-child{ margin-left: 0; }
+		}
+
+		a{
+			font: {
+				size: 0.8em;
+				family: $font-body;
+				weight: 700;
+			}
+			color: $blue;
+			display: block;
+			border: none;
+			padding: 0.25em 0.5em;
+			border-radius: 4px;
+			@include transition(0.3s ease all);
+
+			&:hover{
+				color: $cyan;
+			}
+		}
+
+		.current_page_item a{
+			color: #fff;
+			background: $blue;
+		}
+	}
+
+	@include breakpoint(desktop) {
+
+		a{
+			font-size: 1em;
+			padding-left: 1em; padding-right: 1em;
+		}
+	}
+}
+
+@include breakpoint(tablet) {
+	.nav-mobile{ display: none !important; }
+}

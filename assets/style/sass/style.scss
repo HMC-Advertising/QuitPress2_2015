@@ -1,0 +1,60 @@
+/*!
+Theme Name: 802 Quits
+Theme URI: http://qit.propelled.com
+Description: A WordPress Theme for 802 Quits, Anti-Smoking in Vermont.
+Version: 1.0
+Author: Propeller Media Works
+Author URI: http://propellermediaworks.com
+Tags: clean, flat, white, blue, responsive
+License: GNU General Public License v2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+/******************************
+= Bootstrap
+******************************/
+$grid-gutter-width: 20px;
+@import '_lib/sass-bootstrap'; //wordpress
+@import '_bootstrap/stylesheets/bootstrap/bootstrap-compass';
+@import '_bootstrap/stylesheets/bootstrap/bootstrap';
+@import '_bootstrap/stylesheets/bootstrap/bootstrap-mincer';
+@import _'bootstrap/stylesheets/bootstrap/bootstrap-sprockets';
+
+/******************************
+= Initial Imports
+******************************/
+@import 'compass';
+@import '_base/base';
+@import '_base/wordpress';
+
+/******************************
+= Content
+******************************/
+@import '_content/header';
+@import '_content/content';
+@import '_content/footer';
+@import '_content/sidebar';
+
+/******************************
+= Pages
+******************************/
+@import '_pages/home';
+@import '_pages/stories';
+
+/******************************
+= Plugin Imports
+******************************/
+@import '_plugins/rslides'; //wordpress
+
+/******************************
+= Final Imports
+******************************/
+@import '_base/print';
+
+
+/******************************
+= HMC Defined
+******************************/
+@import '_partials/variables';
+@import '_partials/mixins';
+@import '_partials/main';
+@import '_partials/mobile'

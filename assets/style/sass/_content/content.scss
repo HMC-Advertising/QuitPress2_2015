@@ -1,0 +1,221 @@
+.main{
+	clear: both;
+
+	h2, h3, h4, h5, h6{
+		font-family: $font-body;
+		font-weight: bold;
+	}
+
+	p, p p{
+		font-size: 1.125em;
+	}
+
+	ul{
+		padding-bottom: 1.5em;
+		list-style: disc;
+		padding-left: 2em;
+	}
+
+	li{
+		padding-bottom: 0.5em;
+	}
+
+	img{
+		max-width: 35%;
+	}
+
+	.callout{
+		clear: both;
+		background: $blue-bg;
+		border-radius: 12px;
+		padding: 1.5em 2em 2em;
+		margin-bottom: 2em;
+	}
+}
+
+.nav-reasons{
+	padding-bottom: 2em;
+	clear: both;
+
+	ul{
+		@extend %clearfix;
+		max-width: 490px;
+		margin: 0 auto;
+	}
+
+	li{
+		margin-bottom: 55px;
+		float: left;
+		width: 33.33%;
+		padding: 0 5px;
+	}
+
+	a{
+		position: relative;
+		display: block;
+		font:{
+			family: $font-header;
+			weight: normal;
+		}
+		text-align: center;
+		height: 0;
+		padding: 0;
+		padding-top: 100%;
+		@include opacity(0.35);
+		border-radius: 20px;
+		transition: 0.5s ease all;
+
+		img{
+			position: absolute;
+			display: block;
+			transition: 0.5s ease all;
+		}
+
+		&:hover{
+			@include opacity(1);
+		}
+	}
+
+	.item-wellness a{
+		@include button-color($blue);
+
+
+		img{
+			@include button-icon(auto, -8px, 0, auto, 164px);
+		}
+	}
+	.item-illness a{
+		@include button-color($teal);
+
+		img{
+			@include button-icon(-4px, 0, auto, 0, 94px, center);
+		}
+	}
+	.item-baby a{
+		@include button-color($violet);
+
+		img{
+			@include button-icon(auto, 0, 0, 0, 66px, center);
+		}
+	}
+	.item-money a{
+		@include button-color($teal);
+
+		img{
+			@include button-icon(26px, auto, auto, -5px, 160px);
+		}
+	}
+	.item-loss a{
+		@include button-color($violet);
+
+		img{
+			@include button-icon(auto, 0, -5px, 0, 110px, center);
+		}
+	}
+	.item-family a{
+		@include button-color($blue);
+
+		img{
+			@include button-icon(12px, -7px, auto, auto, 145px);
+		}
+	}
+
+	.current_page_item a{
+		@include opacity(1);
+	}
+
+	.home & {
+		a{
+			@include opacity(1);
+		}
+	}
+}
+
+.nav-reasons-title {
+	position: absolute;
+	display: block;
+	left: 0;
+	right: 0;
+	bottom: -30px;
+	transition: 0.5s ease all;
+}
+
+@include breakpoint(tablet) {
+
+	.nav-reasons{
+
+		ul{
+			max-width: none;
+		}
+
+		li{
+			padding: 0 10px;
+			width: 16.66%;
+			margin-bottom: 20px;
+		}
+
+		a{
+			height: auto;
+			padding: 0;
+		}
+
+		.current_page_item a,
+		a:hover{
+			img{ @include opacity(0); @include transform(scale(1.25)); }
+			.nav-reasons-title{ @include opacity(1); @include transform(scale(1)); }
+		}
+
+		.home &{
+
+			li{
+				width: 33.33%;
+			}
+		}
+	}
+
+	.nav-reasons-title{
+		position: static;
+		padding: 50% 0;
+		height: 0; line-height: 0;
+		color: #fff;
+		@include opacity(0);
+		@include transform(scale(0.75));
+	}
+}
+
+@include breakpoint(desktop) {
+	
+	.main{
+
+		ul{
+			padding-left: 5em;
+		}
+	}
+
+	.main-indent{
+		padding-right: 5.5em;
+	}
+
+	.nav-reasons{
+
+		li{
+			padding: 0 15px;
+			margin-bottom: 30px;
+		}
+
+		a{
+			font-size: 2.125em;
+		}
+
+		.current_page_item a{
+
+			&:before{
+				content: '';
+				display: block;
+				position: absolute;
+				bottom: -0.5em; left: 0.325em; right: 0.325em;
+				height: 6px;
+			}
+		}
+	}
+}

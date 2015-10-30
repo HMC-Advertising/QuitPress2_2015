@@ -1,0 +1,33 @@
+.welcome-text{
+
+	h2{
+		font-size: 2.4em;
+		text-transform: uppercase;
+		padding-bottom: 10px;
+	}
+
+	h3{
+		font:{
+			size: 1.25em;
+			family: $font-body;
+			weight: 300;
+		}
+	}
+
+	p{
+		margin-top: 30px;
+		text-transform: uppercase;
+	}
+
+	@include breakpoint(desktop) {
+		padding: 0 50px;
+		
+		h2{
+			font-size: 3.25em;
+		}
+
+		h3{
+			font-size: 1.5em;
+		}
+	}
+}

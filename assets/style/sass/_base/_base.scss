@@ -1,0 +1,165 @@
+// Normalize Errthing
+@import 'bits';
+
+/******************************
+= Base
+******************************/
+
+*{ @include box-sizing(border-box); }
+html{ font-size: 100%; }
+body{
+	font: normal 100%/1.5em $font-body;
+	background: #fff;
+	color: $blue;
+}
+hr{
+	max-width: 5.625em; height: 6px;
+	margin: 5px auto;
+	border: none;
+	background: $cyan;
+}
+img{ height: auto; }
+blockquote{ padding: 0; margin: 0; border-left: none; }
+h1,h2,h3,h4,h5,h6{
+	font: normal 2em/1.2em $font-header;
+	color: $blue;
+	margin: 0;
+	padding: 0.25em 0 1em;
+
+	a{
+	}
+}
+h1{
+	padding: 0.5em 0 0.25em;
+}
+.bg-blue{
+	background: $blue;
+	color: #fff;
+
+	h1, h2, h3, h4, h5, h6{ color: #fff; }
+}
+h1{ font-size: 2em; }
+h2{ font-size: 1.8em; }
+h3{ font-size: 1.4em; }
+h4{ font-size: 1.3em; }
+h5{ font-size: 1.2em; }
+h6{ font-size: 1.1em; }
+@include breakpoint(tablet) {
+	h1{ font-size: 3.6em; }
+	h2{ font-size: 2em; }
+	h3{ font-size: 1.8em; }
+	h4{ font-size: 1.6em; }
+	h5{ font-size: 1.5em; }
+	h6{ font-size: 1.4em; }
+}
+@include breakpoint(desktop) {
+	h1{ font-size: 4.5em; }
+	h2{ font-size: 2.4em; }
+	h3{ font-size: 1.8em; }
+}
+.page-title{
+	text:{
+		transform: uppercase;
+		align: center;
+	}
+	padding-top: 0;
+	line-height: 1em;
+
+	strong{
+		color: $cyan;
+		font-weight: normal;
+	}
+}
+.page-intro{
+	font-size: 1em;
+	font-weight: 300;
+}
+@include breakpoint(tablet) {
+	.page-title{
+		text-align: left;
+	}
+	.page-intro{
+		font-size: 1.5em;
+	}
+}
+p,li{ line-height: 1.5em; }
+p{
+	margin: 0;
+	padding: 0 0 1.5em 0;
+	a{
+		font-weight: bold;
+		border-bottom: solid 2px transparent;
+		@include transition(0.3s ease all);
+
+		&:hover{ border-bottom: 2px solid $cyan; }
+	}
+}
+ul{ margin: 0; padding: 0; list-style: none; }
+a{
+	color: $violet;
+	text-decoration: none;
+	&:hover{ text-decoration: none; }
+}
+.button,
+[class*='button-']{
+	display: inline-block;
+	padding: 0.5em 0.75em 0.35em;
+	border: solid 3px $violet;
+	border-radius: 8px;
+	font-weight: 700;
+	line-height: 1em;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+	color: $violet;
+	@include transition(.3s ease all);
+
+	&:hover{
+		background: $violet;
+		color: #fff;
+	}
+
+	.bg-blue &{
+		border: solid 2px #fff;
+		color: #fff;
+
+		&:hover{
+			background: #fff;
+			color: $cyan;
+		}
+	}
+}
+
+.button-large{
+	font-size: 1.25em;
+}
+
+.button-blue{ @include button-color($blue-light); }
+.button-blue-dark{ @include button-color($blue); }
+.button-teal{ @include button-color($teal); }
+.button-cyan{ @include button-color($cyan); }
+.button-violet{ @include button-color($violet); }
+.button-gray{ @include button-color($gray); }
+
+/******************************
+= Text Highlight
+******************************/
+
+::selection { background: $cyan; color: #fff; }
+::-moz-selection { background: $cyan; color: #fff; }
+
+/******************************
+= Alignment Class Styles
+******************************/
+.parent{ padding: 0 !important; }
+.ta-center{ text-align: center; }
+.fr{ float: right; }
+.fl{ float: left; }
+.pb0{ padding-bottom: 0; }
+.pt0{ padding-top: 0; }
+.pl0{ padding-left: 0; }
+.pr0{ padding-right: 0; }
+.mb0{ margin-bottom: 0; }
+.mt0{ margin-top: 0; }
+.ml0{ margin-left: 0; }
+.mr0{ margin-right: 0; }

@@ -1,0 +1,247 @@
+.footer{
+	margin-bottom: 30px;
+}
+
+.nav-footer{
+	overflow: hidden;
+	clear: both;
+	display: none;
+
+	ul{
+		overflow: hidden;
+	}
+
+	li{
+		width: 20%;
+		position: relative;
+	}
+
+	.item-gum a{
+		@include button-color($blue-light);
+	}
+
+	.item-phone a{
+		@include button-color($violet);
+
+		&:after{
+			content: '(800)QUIT-NOW';
+			position: absolute;
+			left: 0; bottom: -30px; right: 0;
+			font-size: 0.5em
+		}
+	}
+
+	.item-online a{
+		@include button-color($teal);
+	}
+
+	.item-person a{
+		@include button-color($cyan);
+	}
+
+	.item-own a{
+		@include button-color($gray);
+
+		small{
+			font-size: 0.5em;
+			padding-top: 0;
+		}
+	}
+
+	a{
+		@extend .button;
+		display: block;
+		border-radius: 0;
+		font:{
+			size: 2em;
+			family: $font-header;
+			weight: normal;
+		}
+		color: #fff !important;
+		border: none;
+		display: block;
+		border-radius: 0;
+		padding: 0.5em 0.5em 6em;
+		margin-bottom: -5em;
+
+		small{
+			display: none;
+			font: normal 0.4em/1.2em $font-body;
+			text-transform: none;
+			padding-top: 0.5em;
+			@include transition(0.3 ease all);
+		}
+
+		.small-phone{
+			font-family: $font-header;
+			font-size: 0.5em;
+			padding-top: 0;
+			margin-bottom: -0.5em;
+		}
+
+		&:hover{
+			background: #fff !important;
+			color: $cyan !important;
+
+			small{ color: $blue; }
+		}
+	}
+
+	.current-menu-item a{ background: #fff; color: $cyan !important; }
+
+	.home & {
+		display: block;
+
+		li{ margin-bottom: 10px; width: 100%; }
+
+		.item-phone a:after{ display: none; }
+
+		a{
+			border-radius: 12px;
+			padding-bottom: 0.5em; margin-bottom: 0;
+		}
+	}
+
+	@include breakpoint(tablet) {
+		display: block;
+
+		a{
+			padding-top: 0.5em;
+			padding-bottom: 5.5em;
+
+			small{ display: block; }
+		}
+
+		&.nav-footer-int{
+			li{ width: 20%; float: left; }
+		}
+
+		.home & {
+			margin: 0 -10px;
+
+			li{
+				margin-bottom: 20px;
+				float: left;
+				width: 50%;
+				padding: 0 10px;
+			}
+
+			.item-gum,
+			.item-phone,
+			.item-own{ clear: both; }
+
+			.item-own{ width: 100%; }
+
+			a{
+				padding-bottom: 0.5em;
+			}
+		}
+	}
+
+	@include breakpoint(desktop) {
+		a{
+			font-size: 3em;
+
+			small{
+				font-size: 0.325em;
+			}
+		}
+	}
+}
+
+.footer-header h4{
+	font: normal 1.4em $font-body;
+	padding: 40px 20px;
+
+	@include breakpoint(tablet) { font-size: 2em; }
+}
+
+.footer-bottom{
+	border-top: solid 1px #fff;
+	padding: 0.5em 0;
+	text-align: center;
+}
+
+.copy,
+.nav-footer-secondary li{
+	font-size: 0.75em;
+	text-transform: uppercase;
+}
+
+.copy{
+	display: block;
+	padding: 1em 0;
+}
+
+.nav-footer-secondary{
+	overflow: hidden;
+
+	li{
+		display: inline-block;
+		margin-right: 1em;
+	}
+
+	a{
+		color: #fff;
+
+		&:hover{ text-decoration: underline; }
+	}
+}
+
+.for-providers{
+	display: none;
+	font-family: $font-body;
+	font-weight: bold;
+}
+
+@include breakpoint(tablet) {
+	.for-providers{
+		display: inline-block;
+		float: right;
+	}
+
+	.copy,
+	.nav-footer-secondary{
+		float: left;
+	}
+
+	.copy{
+		padding-top: 0;
+	}
+
+	.nav-footer-secondary{
+		clear: left;
+
+		li{
+			display: block;
+			float: left;
+		}
+	}
+}
+
+@include breakpoint(tablet) {
+
+	.footer{
+		margin-bottom: 0;
+		margin-top: 45px;
+	}
+}
+
+@include breakpoint(desktop) {
+	
+	.footer-bottom {
+		padding-bottom: 2em; padding-top: 0.625em;
+	}
+
+	.copy{ padding-bottom: 0; }
+
+	.copy,
+	.nav-footer-secondary{
+		padding-top: 0.5em;
+	}
+
+	.nav-footer-secondary{
+		clear: none;
+		padding-left: 1em;
+	}
+}

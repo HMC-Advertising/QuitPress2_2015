@@ -1,0 +1,68 @@
+.side-nav{
+	padding-top: 1em;
+	padding-bottom: 2em;
+	
+	li{
+		margin-bottom: 0.5em;
+	}
+
+	a{
+		display: block;
+		padding: 0.25em 0.5em;
+		background: $violet;
+		border: solid 3px $violet;
+		border-radius: 12px;
+		color: #fff;
+		font-family: $font-header;
+		font-size: 1.8em;
+		line-height: 1em;
+		text-align: center;
+		text-transform: uppercase;
+		@include transition(0.3s ease all);
+	}
+
+	.current_page_item a,
+	a:hover{
+		background: #fff;
+		color: $violet;
+	}
+}
+
+@include breakpoint(desktop) {
+	.side-nav{
+		padding-bottom: 4em;
+
+		a{
+			font-size: 2.325em;
+		}
+	}
+}
+
+.module-title,
+.module-text{
+	padding: 0; margin: 0;
+}
+
+.module-title{
+	color: $violet;
+	font: bold 1.325em $font-body;
+	padding-bottom: 0.5em;
+}
+
+.module-text{
+	color: $blue;
+}
+
+.module{
+	display: block;
+	border: solid 3px $gray-light;
+	border-radius: 12px;
+	background: url('img/module-link.jpg') 95% center no-repeat;
+	padding: 1.25em 3em 1.25em 1.25em;
+	@include transition(0.3s ease all);
+
+	&:hover{
+		border-color: $violet;
+		background-position-x: 92%;
+	}
+}
