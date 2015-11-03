@@ -3,16 +3,16 @@ Error: Invalid CSS after "@import ": expected file to import (string or url()), 
         on line 20 of /Volumes/u/WEB_DEVELOPMENT/htdocs/CLIENT_WP_MULTISITE/wp-content/themes/QuitPress2_2015/assets/style/sass/style.scss
 
 15: $grid-gutter-width: 20px;
-16: @import 'lib/sass-bootstrap'; //wordpress
+16: @import '_lib/sass-bootstrap'; //wordpress
 17: @import '_bootstrap/stylesheets/bootstrap/bootstrap-compass';
 18: @import '_bootstrap/stylesheets/bootstrap/bootstrap';
 19: @import '_bootstrap/stylesheets/bootstrap/bootstrap-mincer';
 20: @import _'bootstrap/stylesheets/bootstrap/bootstrap-sprockets';
-21: /******************************
-22: = Initial Imports
-23: ******************************\/
-24: @import 'compass';
-25: //@import 'base/base';
+21: 
+22: /******************************
+23: = Initial Imports
+24: ******************************\/
+25: @import 'compass';
 
 Backtrace:
 /Volumes/u/WEB_DEVELOPMENT/htdocs/CLIENT_WP_MULTISITE/wp-content/themes/QuitPress2_2015/assets/style/sass/style.scss:20
@@ -49,4 +49,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CSS after \"@import \": expected file to import (string or url()), was \"_'bootstrap/sty...\"\A         on line 20 of /Volumes/u/WEB_DEVELOPMENT/htdocs/CLIENT_WP_MULTISITE/wp-content/themes/QuitPress2_2015/assets/style/sass/style.scss\A \A 15: $grid-gutter-width: 20px;\A 16: @import 'lib/sass-bootstrap'; //wordpress\A 17: @import '_bootstrap/stylesheets/bootstrap/bootstrap-compass';\A 18: @import '_bootstrap/stylesheets/bootstrap/bootstrap';\A 19: @import '_bootstrap/stylesheets/bootstrap/bootstrap-mincer';\A 20: @import _'bootstrap/stylesheets/bootstrap/bootstrap-sprockets';\A 21: /******************************\A 22: = Initial Imports\A 23: ******************************/\A 24: @import 'compass';\A 25: //@import 'base/base';"; }
+  content: "Error: Invalid CSS after \"@import \": expected file to import (string or url()), was \"_'bootstrap/sty...\"\A         on line 20 of /Volumes/u/WEB_DEVELOPMENT/htdocs/CLIENT_WP_MULTISITE/wp-content/themes/QuitPress2_2015/assets/style/sass/style.scss\A \A 15: $grid-gutter-width: 20px;\A 16: @import '_lib/sass-bootstrap'; //wordpress\A 17: @import '_bootstrap/stylesheets/bootstrap/bootstrap-compass';\A 18: @import '_bootstrap/stylesheets/bootstrap/bootstrap';\A 19: @import '_bootstrap/stylesheets/bootstrap/bootstrap-mincer';\A 20: @import _'bootstrap/stylesheets/bootstrap/bootstrap-sprockets';\A 21: \A 22: /******************************\A 23: = Initial Imports\A 24: ******************************/\A 25: @import 'compass';"; }

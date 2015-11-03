@@ -1,0 +1,79 @@
+@media only screen and (max-width : 400px) {
+    .main .wplightbox img{
+        max-width:100%;
+        float:none;
+        margin:auto !important;
+    }
+    .wplightbox.sticker img{
+          margin-bottom: -50px !important;
+          margin-left: 41px !important;
+    }
+    .main .wplightbox{
+        text-align: center;
+    }
+    .linkButton{
+        height:auto;  
+        margin-left: -25px;
+        margin-right: -35px;
+    }
+      .linkButton .images {
+        display:block;
+        float:none;
+        text-align: center;
+        top:0;
+        right:0;
+    }
+
+    .linkButton .images img {
+        
+    }
+
+    .linkButton > div{
+        width:100% !important;
+        clear: both;
+    }
+    .linkButton .con h3{
+        color: #ffffff;
+        margin-bottom: -20px;
+        font-size: 23px;
+        text-align: center;
+        padding:20px;
+    }
+
+    .linkButton .con p{
+        color: #ffffff;
+        padding-top: 10px;
+        font-weight: 400;
+        padding:20px;
+    }
+
+
+
+    .page-title{
+          font-size: 3em;
+          line-height: 50px;
+    }
+
+    [class*='grid-'] {
+        float: left;
+        padding-right: 10px;
+        padding-top: 10px;
+        padding-left: 10px;
+    }
+    .grid {
+        padding: 20px;
+        overflow: hidden;
+        padding-right:30px;
+    }   
+
+    .main p{
+        font-size: 0.90em
+    }
+    .wrap{
+
+    }
+    .main{
+        width:100%;
+    }
+
+}
