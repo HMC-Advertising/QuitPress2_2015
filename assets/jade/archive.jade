@@ -1,0 +1,18 @@
+- get_header();  
+section(role="main" class="archive-results")
+	h3
+		- single_cat_title();
+	- if (have_posts()) : while (have_posts()) : the_post();  
+	article(class="results")
+		h4
+			a(href!="<?php the_permalink() ?>" title!="<?php the_title_attribute(); ?>")
+				- the_title(); 
+		small Posted &nbsp;
+			time(datetime!="<?php echo the_time('Y-m-j'); ?>" pubdate="pubdate")
+				- the_time('F jS, Y'); 
+		- the_excerpt(); 
+		a(href!="<?php the_permalink(); ?>" class="button") Read More
+
+	- endwhile; posts_nav_link('--','Previous','Next'); endif; 
+- get_sidebar(); 
+- get_footer(); 

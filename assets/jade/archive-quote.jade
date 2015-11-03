@@ -5,10 +5,8 @@ main(class="grid-full")
 		strong from around the 802
 	div(class="stories-quotes")
 		- if (have_posts()) : while (have_posts()) : the_post(); 
-		<blockquote class="stories-quote aq">
-			p "
-				- the_field('quote'); 
-				"
+		blockquote(class="stories-quote aq")
+			p != "<?php the_field('quote'); ?>""
 			div(class="left")
 				span(class="stories-quote-cite")
 					strong
