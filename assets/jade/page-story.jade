@@ -1,0 +1,109 @@
+- /* Template Name: Stories Template */ 
+- get_header(); 
+- if ( have_posts() ) : while ( have_posts() ) : the_post();
+	- get_template_part('assets/php/templates', 'stories-nav');  
+	main(class="main")
+		div(class="grid")
+			header(class="grid-full stories-header")
+				- $hl; // this is for the copy issues. Instead dealing with the buttons and the like, this just lookes up the title name then output for it. 
+				
+				- if(get_the_title() ==  "Wellness" ):
+					- $hl ='Real tips, tools, and stories to help when <strong>Quitting for your Wellness</strong>';
+				- else if(get_the_title() ==  "Illness" ): 
+					- $hl ='Real tips, tools, and stories to help when <strong>Quitting for your Illness</strong>';
+				- else if(get_the_title() ==   "Baby"):
+					- $hl ='Real tips, tools, and stories to help when <strong>Quitting for your Baby</strong>';
+				- else if(get_the_title() ==   "Family"):
+					- $hl ='Real tips, tools, and stories to help when <strong>Quitting for your Family</strong>';
+				- else if(get_the_title() ==   "Loss"):
+					- $hl ='Real tips, tools, and stories to help when <strong>Quitting for your Lost Loved One</strong>';
+				- else:
+					- $hl ='Real tips, tools, and stories to help when <strong>Quitting to save Money</strong>';
+				- endif;
+		
+			h1(class="page-title")
+				- echo $hl; 
+				- $stories_intro = get_field('stories_intro'); 
+				- if($stories_intro) : 
+					- if(get_the_title() == "Baby"):
+						- $linkBaby = ' <a href="http://802quits.org/quit-help-by-phone/baby/">Learn how you can get FREE personal help quitting for you and your baby.</a>'; 
+						- $s = $stories_intro . $linkBaby; 
+					- else if(get_the_title() == "Money"):  
+						- $l = ' <a href="http://802quits.org/calculator/">Add up how much money you’ll save by not smoking for 6 months, a year, or more ...</a>'; 
+						- $s = $stories_intro . $l; 
+					- else: 
+						- $s =$stories_intro; 
+					- endif; 
+					- _e('<div class="stories-intro"><p>'.$s.' </p></div>'); 
+				- endif; 
+		div(class="grid")
+		- $quotes = get_field('quote_picker'); 
+		- if($quotes): 
+			div(class="tgrid-2-3 mb0")
+				div(class="main-indent")
+					div(class="stories-quotes")
+						- foreach($quotes as $post):
+							- setup_postdata($post); 
+							- $quote = get_field('quote'); ?>
+							- $content = get_the_content(); ?>
+							- if((strpos($quote, '<iframe') !== FALSE) or strpos($content, '<iframe') !== FALSE): ?>
+								- if($quote):
+									blockquote(class="stories-quote q")
+										p != <?php the_field('quote'); ?>
+										div(style="float:left" class="left")
+											span(class="stories-quote-cite")
+												strong != <?php the_field('name'); ?>
+												- the_field('location'); 
+											
+										div(style="float:right" class="right")
+											a(href!="<?php the_permalink(); ?>" class="button") Read More
+									
+								- else: 
+									blockquote(class="stories-quote f")
+										p <?php echo  $content; ?>
+										span(class="stories-quote-cite")
+											strong <?php the_field('name'); ?>
+											<?php the_field('location'); ?>
+										
+								- endif;
+							- else: 
+								- if($quote): 
+									blockquote(class="stories-quote q")
+										p != <?php the_field('quote'); ?>
+										div(style="float:left" class="left")
+											span(class="stories-quote-cite")
+												strong !=<?php the_field('name'); ?>
+												- the_field('location'); 
+										div(style="float:right" class="right")
+											a(href!="<?php the_permalink(); ?>" class="button") Read More
+										
+								- else:  			
+									blockquote class="stories-quote f">
+										p != "<?php echo  $content; ?>"
+										span(class="stories-quote-cite")
+											strong != <?php the_field('name'); ?>
+											- the_field('location');
+								- endif;  
+							- endif;  
+						- wp_reset_postdata(); 
+					- endforeach; 
+					a(href!="<?php $title_lower = strtolower(get_the_title()); echo home_url().'/real-stories/'.$title_lower; ?>" class="button-large") Read More Stories
+				- endif; 
+				- $tips = get_field('tips_and_tools'); 
+				- if($tips): 
+					aside(class="tgrid-1-3 stories-tips")
+						h2(class="stories-tips-header") Tips &amp; Tools
+						- foreach($tips as $post): 
+							- setup_postdata($post); 
+						- endforeach;
+						div(class="stories-tip")
+							- the_content(); 
+						- wp_reset_postdata();  
+					
+				- endforeach; 
+				a(href!="<?php echo home_url();?>/resources/tips-and-tools/" class="button-large") Get More Tips &amp; Tools
+		- endif; ?>
+		
+- endwhile; endif; get_footer(); 
+
+

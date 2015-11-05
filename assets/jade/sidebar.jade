@@ -1,0 +1,17 @@
+aside(class="sidebar mgrid-full tgrid-1-3")
+	- if(is_page("providers") or is_page("providers/webinars-2/") or is_page("providers/provider-resources/") or is_page("providers/resources-patient/") or is_page("providers/helpful-links/") or is_page("cpt-code-information/") or is_page("providers/videos/")  ):
+		- get_template_part("assets/php/template", "sidebar-providers"); 
+	- else:
+		- get_template_part("assets/php/template", "sidebar-page"); 
+	- endif; 
+
+	-if (get_field('callout_picker')) : 
+		- foreach(get_field('callout_picker') as $post): 
+			- setup_postdata($post); 
+			section
+				a(href!="<?php the_field('link'); ?>" class="module")
+					h5(class="module-title")
+						- the_field('title'); 
+					p(class="module-text")
+						- the_field('text'); 
+		- endforeach; wp_reset_postdata(); endif;

@@ -1,0 +1,35 @@
+- /* Template Name: Real Stories Archive Template */ 
+- get_header(); 
+- $title_lower = strtolower(get_the_title()); 
+- $the_query = array( 'category_name' => $title_lower, 'post_type' => 'stories', 'posts_per_page' => 30 ); 
+- $stories_query = new WP_Query( $the_query ); 
+- if ( $stories_query->have_posts() ) : 
+	div(class="grid")
+		main(role="main" class="main tgrid-2-3")
+			div(class="main-indent")
+				h1(class="page-title") Real Stories - <?php the_title(); ?>
+				- the_content();  
+				- while ( $stories_query->have_posts() ) : $stories_query->the_post();  
+					blockquote(class="stories-quote")
+						- $quote = get_field('quote');  if($quote) : 
+							p
+								- echo $quote; 
+						- else: 
+							- the_content(); 
+						- endif; 
+						- $name = get_field('name'); 
+						- $location = get_field('location'); 
+						- if($location || $name) : 
+							span(class="stories-quote-cite")
+							- if($name): 
+								strong <?php echo $name; ?> 
+							- endif; 
+							span
+								- echo $location; 
+							- endif; 
+							- if($quote) : 
+								a(href!="<?php the_permalink(); ?>" class="button") Read More
+						- endif; 
+				- endwhile;  
+		- get_sidebar('stories-archive'); 
+- endif; wp_reset_postdata();  get_footer();  

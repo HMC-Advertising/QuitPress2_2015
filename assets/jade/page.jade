@@ -1,0 +1,18 @@
+- get_header(); 
+- if ( have_posts() ) : while ( have_posts() ) : the_post(); 
+	div(class="grid")
+		main(role="main" class="main tgrid-2-3")
+			div(class="main-indent")
+				h1(class="page-title")
+					- if($post->post_parent):
+						a(href!="<?php get_permalink($post->post_parent); ?>")
+							- echo get_the_title($post->post_parent); 
+							br 
+							- echo get_the_title(); 
+					- else:
+						- the_title(); 
+					- endif;  
+				- the_content(); 
+		- get_sidebar(); 
+- endwhile; endif; 
+- get_footer(); 
