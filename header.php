@@ -16,7 +16,7 @@
 				?></title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		
+		<link rel="alternate" href="http://example.com" hreflang="en-us" />
 		<link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/favicon.ico">
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>"> 
 		
