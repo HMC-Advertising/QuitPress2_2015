@@ -1,28 +1,28 @@
 
-		<?php if(!is_front_page()  ):
-			 get_template_part("assets/php/templates/footer-inter"); 
-		else : 
-			get_template_part("assets/php/templates/footer-frontpage"); 
+		<?php if(is_front_page() ):
+
+			 get_template_part("assets/php/templates/footer", "frontpage");  
+		else:
+			
+			get_template_part("assets/php/templates/footer","inter"); 
 		endif; ?>
 
 		
 		
-		<?php if(is_page("Free Quit Help for You and Your Baby") ):
+		<?php /* if(is_page("Free Quit Help for You and Your Baby") ):
 			get_template_part("assets/php/templates/footer-baby");
-		 endif; ?>
+		 endif; 
 
-
-
-		<?php if(is_page("baby-2")):
+		 if(is_page("baby-2")):
 			get_template_part("assets/php/templates/footer-baby2");
-		endif; ?>
+		endif; 
 
 
-		<?php if(is_page_template("template-real-stories-archive.php")): 
+		 if(is_page_template("template-real-stories-archive.php")): 
 			if(get_the_title() == "Baby"):
 				get_template_part("assets/php/templates/footer-baby3");
 			 endif; 
-		 endif; ?>	
+		 endif; */ ?>	
 
 		<?php wp_footer(); ?>
 		

@@ -19,6 +19,6 @@
     <h3 class="<?php if(is_ipad() or is_tablet()){echo 'M';} ?>">And get tips and tools that can help make it easier if you decide to quit smoking.</h3><?php if(is_mobile() ): //or is_ipad() or is_tablet()  ?>
     <div class="mobileArrow"><strong>Choose from the reasons Vermonters are talking about the most</strong></div><?php endif;  ?>
   </div>
-  <div class="parent mgrid-full tgrid-1-2"><?php get_template_part('assets/php/templates', 'stories-nav');  ?>
+  <div class="parent mgrid-full tgrid-1-2"><?php get_template_part('assets/php/templates/stories', 'nav');  ?>
   </div>
 </div><?php endwhile; endif;  ?><?php get_footer();  ?>

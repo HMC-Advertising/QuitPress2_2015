@@ -1,6 +1,6 @@
 <?php 
 	class menu_with_description extends Walker_Nav_Menu {
-		function start_el(&$output, $item, $depth, $args) {
+		function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
 			global $wp_query;
 			$indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
 			
@@ -25,7 +25,7 @@
 			$item_output .= '</a>';
 			$item_output .= $args->after;
 
-			$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
+			$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args, $id );
 		}
 	}
 
@@ -57,7 +57,7 @@
 			if ( '' === $page->post_title )
 			        $page->post_title = sprintf( __( '#%d (no title)' ), $page->ID );
 
-			$output .= $indent . '<li class="' . $css_class . ' item-' . $title_lower . '"><a href="' . get_permalink($page->ID) . '">' . $link_before . apply_filters( 'the_title', $page->post_title, $page->ID ) . $link_after . '<img src="' . get_bloginfo('template_url') .'/img/icon-' . $title_lower . '.png"></a>';
+			$output .= $indent . '<li class="' . $css_class . ' item-' . $title_lower . '"><a href="' . get_permalink($page->ID) . '">' . $link_before . apply_filters( 'the_title', $page->post_title, $page->ID ) . $link_after . '<img src="' . get_bloginfo('template_url') .'/assets/img/icon-' . $title_lower . '.png"></a>';
 			if ( !empty($show_date) ) {
 			        if ( 'modified' == $show_date )
 			                $time = $page->post_modified;
