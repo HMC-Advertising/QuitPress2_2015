@@ -6,13 +6,13 @@ main(class="grid-full")
 	div(class="stories-quotes")
 		- if (have_posts()) : while (have_posts()) : the_post(); 
 		blockquote(class="stories-quote aq")
-			p != "<?php the_field('quote'); ?>""
+			p != "<?php the_field('quote'); ?>"
 			div(class="left")
 				span(class="stories-quote-cite")
 					strong
 						- the_field('name'); 
 					- the_field('location');  
 		
-		- endwhile; posts_nav_link('--','Previous','Next'); endif; ?>
+		- endwhile; posts_nav_link('--','Previous','Next'); endif; 
 	
 - get_footer(); 

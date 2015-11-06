@@ -90,7 +90,7 @@
 	border: none;
 	outline: none;
 	width: 48px; height: 63px;
-	background: transparent url('img/icon-menu-button.png') 10px 10px no-repeat;
+	background: transparent url('assets/img/icon-menu-button.png') 10px 10px no-repeat;
 	padding: 0; margin-top: 10px;
 
 	&.is-active{
@@ -161,7 +161,7 @@
 	display: block;
 	text-indent: -9999px;
 	border: none;
-	background: url('img/icon-search.jpg') 0 0 no-repeat;
+	background: url('assets/img/icon-search.jpg') 0 0 no-repeat;
 	width: 13px; height: 12px;
 }
 

@@ -1,5 +1,6 @@
 //Built by Amanda
-(function(){
+
+(function($){
 	var bodyHeight = $("body").height();
   	var vwptHeight = $(window).height();
     var winWidth = $(window).width();
@@ -68,7 +69,7 @@
           $(this).attr("src",url+char+"wmode=transparent");
     });
 
- }())
+ }(jQuery))
 
 
 function hideMe(width){

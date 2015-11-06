@@ -1,26 +1,26 @@
-		</div>
-		<?php if(!is_front_page() ):
-			 get_template_part("assets/php/template", "footer-inter"); 
+
+		<?php if(!is_front_page()  ):
+			 get_template_part("assets/php/templates/footer-inter"); 
 		else : 
-			get_template_part("assets/php/template", "footer-frontpage"); 
+			get_template_part("assets/php/templates/footer-frontpage"); 
 		endif; ?>
 
 		
 		
 		<?php if(is_page("Free Quit Help for You and Your Baby") ):
-			get_template_part("assets/php/template", "footer-baby");
+			get_template_part("assets/php/templates/footer-baby");
 		 endif; ?>
 
 
 
 		<?php if(is_page("baby-2")):
-			get_template_part("assets/php/template", "footer-baby2");
+			get_template_part("assets/php/templates/footer-baby2");
 		endif; ?>
 
 
 		<?php if(is_page_template("template-real-stories-archive.php")): 
 			if(get_the_title() == "Baby"):
-				get_template_part("assets/php/template", "footer-baby3");
+				get_template_part("assets/php/templates/footer-baby3");
 			 endif; 
 		 endif; ?>	
 
@@ -50,16 +50,16 @@
 						if(get_the_title() ==  "Wellness" ):
 							echo 0;
 						
-						else if(get_the_title() ==  "Illness" ):
+						elseif(get_the_title() ==  "Illness" ):
 							echo 1;
 						
-						else if(get_the_title() ==   "Baby"):
+						elseif(get_the_title() ==   "Baby"):
 							echo 2;
 						
-						else if(get_the_title() ==   "Family"):
+						elseif(get_the_title() ==   "Family"):
 							echo 3;
 						
-						else if(get_the_title() ==   "Loss"):
+						elseif(get_the_title() ==   "Loss"):
 							echo 4;
 						
 						else:

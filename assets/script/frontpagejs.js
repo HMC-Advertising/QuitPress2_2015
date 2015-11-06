@@ -1,5 +1,5 @@
 //Built by Amanda
-(function(){
+(function($){
 
 
  
@@ -7,7 +7,7 @@
 
 
 
-}())
+}(jQuery))
 function hideMe(width){
     if(width < 769 ){
       $(".chooseFromIcon").hide();

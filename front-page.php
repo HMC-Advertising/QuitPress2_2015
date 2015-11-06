@@ -8,7 +8,7 @@
         <div id="chooseFromText" class="chooseFromText M"><strong>Read stories from Vermonters like you</strong></div>
       </div>
       <div class="right-triangle blue"></div>
-    </div><?php else if(!is_mobile() ):   ?>
+    </div><?php elseif(!is_mobile() ):   ?>
     <div class="chooseFromContainer">
       <div class="chooseFrom">
         <div class="right-triangle white"></div>

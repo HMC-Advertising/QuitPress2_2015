@@ -60,7 +60,7 @@
 		</script> 
 	</head>
 	
-	<body <?php body_class($class); ?>>
+	<body <?php body_class(); ?>>
 		<div id="main-container" class="wrap">
 			<div id="header-wrap" class="grid">
 				<header id="header" class="header grid-full" role="banner">
@@ -71,7 +71,7 @@
 						<div class="logo">
 					<?php endif; ?>
 						<a href="<?php echo get_option('home'); ?>">
-							<img src="<?php bloginfo('template_url'); ?>/img/logo.jpg" alt="<?php bloginfo('name'); ?>">
+							<img src="<?php bloginfo('template_url'); ?>/assets/img/logo.jpg" alt="<?php bloginfo('name'); ?>">
 						</a>
 						<span class="logo-tagline">You Can Quit.<br />We Can Help.</span>
 					
@@ -96,7 +96,7 @@
 												<a href="<?php echo $facebook_link; ?>" target="_blank">facebook</a>
 											</li>
 										<?php endif; ?>
-										<?php if($youtube_link){:?>
+										<?php if($youtube_link):?>
 											<li>
 												<a href="<?php echo $youtube_link; ?>" target="_blank"></a>
 											</li>
