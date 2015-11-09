@@ -7,9 +7,9 @@ div(id="stickyFooterContainer" style="z-index: 100000;")
 		- endif; 
 	footer(class="footer-bottom-wrap bg-blue")
 		div(class="footer-bottom")
-			div(class="wrap")
-				div(class="grid")
-					div(class="grid-full")
+			div(class="row")
+				div(class="container")
+					div(class="col-lg-12")
 						- if(!is_mobile()) : 
 							a(href!="<?php echo home_url(); ?>/providers/" class!="button for-providers<?php if(get_the_title()=='Information for Health Care Providers')echo ' on'; ?>") For Providers
 						- endif; 

@@ -1,8 +1,8 @@
-aside(class="sidebar mgrid-full tgrid-1-3")
+aside(class="sidebar col-lg-3 col-md-2 col-sm-12 col-xs-12 ")
 	- if(is_page("providers") or is_page("providers/webinars-2/") or is_page("providers/provider-resources/") or is_page("providers/resources-patient/") or is_page("providers/helpful-links/") or is_page("cpt-code-information/") or is_page("providers/videos/")  ):
-		- get_template_part("assets/php/template", "sidebar-providers"); 
+		- get_template_part("assets/php/templates/sidebar", "providers"); 
 	- else:
-		- get_template_part("assets/php/template", "sidebar-page"); 
+		- get_template_part("assets/php/templates/sidebar", "page"); 
 	- endif; 
 
 	-if (get_field('callout_picker')) : 

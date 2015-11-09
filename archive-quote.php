@@ -1,5 +1,5 @@
 <?php get_header();  ?>
-<main class="grid-full">
+<main class="col-lg-12">
   <h1 class="page-title"> <?php post_type_archive_title();  ?><strong>from around the 802</strong>
   </h1>
   <div class="stories-quotes"><?php if (have_posts()) : while (have_posts()) : the_post();  ?>

@@ -30,7 +30,7 @@
 				'not_found' => 'No Callouts Found',
 				'not_found_in_trash' => 'No Callouts Found in Trash',
 				'parent' => 'Parent Callout',
-				)
+			)
 		));
 	}
 

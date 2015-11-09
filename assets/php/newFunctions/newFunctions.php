@@ -76,4 +76,23 @@
 	}
 
 	add_filter( 'pre_get_posts', 'namespace_add_custom_types' );
+
+	function states($address_types, $form_id ){
+		$address = array(
+			'us' => array(
+				'states' => array(
+					'Vermont', 'New Hampshire', 'New York'
+				)
+			)
+		);
+
+
+		return $address;
+	}
+
+	
+
+
+	add_filter( 'gform_address_types_5', 'states', 10, 2 );
+
 ?>

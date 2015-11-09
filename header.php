@@ -61,9 +61,9 @@
 	</head>
 	
 	<body <?php body_class(); ?>>
-		<div id="main-container" class="wrap">
-			<div id="header-wrap" class="grid">
-				<header id="header" class="header grid-full" role="banner">
+		<div id="main-container" class="row">
+			<div id="header-wrap" class="container">
+				<header id="header" class="header col-lg-12" role="banner">
 					
 					<?php if(is_front_page()) : ?>
 						<h1 class="logo">
@@ -82,7 +82,7 @@
 					<?php endif; ?>
 					<button id="nav-main-open" aria-hidden="true">Menu</button>
 					<div class="header-nav-wrap">
-						<?php include('searchform.php'); ?>
+						<?php get_search_form(); ?>
 						<?php
 							if(function_exists( 'ot_get_option' )) :
 								$facebook_link = ot_get_option('facebook_link');

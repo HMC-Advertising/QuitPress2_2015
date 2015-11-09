@@ -1,8 +1,8 @@
 - get_header(); 
 - if ( have_posts() ) : while ( have_posts() ) : the_post(); 
 
-div(class="grid")
-	div(class="tgrid-1-2 ta-center welcome-text")
+div(class="container")
+	div(class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ta-center welcome-text")
 		h2 See Real Stories From Around <span class="hidden-lg hidden-xs hidden-sm hidden-xxs"<br></span> the 802
 		- if(is_ipad() or is_tablet()):  
 			div(class="chooseFromContainer M")
@@ -28,7 +28,7 @@ div(class="grid")
 				strong Choose from the reasons Vermonters are talking about the most
 		- endif; 
 	
-	div(class="parent mgrid-full tgrid-1-2")
+	div(class="parent col-lg-6 col-md-6 col-sm-6 col-xs-12")
 		- get_template_part('assets/php/templates/stories', 'nav'); 
 		
 	
