@@ -313,7 +313,7 @@ function youtube_videos($atts, $content = null ){
     	$output .= "<strong>".$title."</strong>";
     	$output .= "</a></div>";
     }
-	$output .= '<div class="youtubeWrapper" style="position:relative;  z-index:0;">';
+	$output .= '<div class="embed-responsive embed-responsive-16by9" style="position:relative;  z-index:0;">';
 	$output .= '<iframe width="560" height="315" src="' .$url . '?rel=0&wmode=transparent" wmode="Opaque" frameborder="0" allowfullscreen></iframe>';
 	$output .= '</div>';
 
@@ -322,4 +322,3 @@ function youtube_videos($atts, $content = null ){
 
 }
 add_shortcode('youtube', 'youtube_videos');
-	?>

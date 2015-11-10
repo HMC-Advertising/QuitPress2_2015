@@ -1,5 +1,5 @@
 <?php /* Template Name: Real Stories Archive Template */  ?><?php get_header();  ?><?php $title_lower = strtolower(get_the_title());  ?><?php $the_query = array( 'category_name' => $title_lower, 'post_type' => 'stories', 'posts_per_page' => 30 );  ?><?php $stories_query = new WP_Query( $the_query );  ?><?php if ( $stories_query->have_posts() ) :  ?>
-<div class="container">
+<div class="container mainContent">
   <main role="main" class="main col-md-9">
     <div class="main-indent">
       <h1 class="page-title">Real Stories - <?php the_title(); ?></h1><?php the_content();   ?><?php while ( $stories_query->have_posts() ) : $stories_query->the_post();   ?>

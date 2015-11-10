@@ -21,7 +21,13 @@
 	}
 
 	img{
-		max-width: 35%;
+		max-width: auto;
+		&.full{
+			max-width: 100%;
+		}
+		&.half{
+			max-height: 50%;
+		}
 	}
 
 	.callout{

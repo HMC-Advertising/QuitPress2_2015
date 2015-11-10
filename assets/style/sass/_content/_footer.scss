@@ -26,7 +26,10 @@
 		&:after{
 			content: '(800)QUIT-NOW';
 			position: absolute;
-			left: 0; bottom: -30px; right: 0;
+			left: 0; 
+			bottom: -30px; 
+			right: 0;
+			padding-bottom:20px;
 			font-size: 0.5em
 		}
 	}
@@ -62,7 +65,7 @@
 		display: block;
 		border-radius: 0;
 		padding: 0.5em 0.5em 6em;
-		margin-bottom: -5em;
+		margin-bottom: -4em;
 
 		small{
 			display: none;
@@ -140,7 +143,7 @@
 
 	@include breakpoint(desktop) {
 		a{
-			font-size: 3em;
+			font-size: 1.5em;
 
 			small{
 				font-size: 0.325em;
@@ -230,7 +233,8 @@
 @include breakpoint(desktop) {
 	
 	.footer-bottom {
-		padding-bottom: 2em; padding-top: 0.625em;
+		//padding-bottom: 2em; 
+		padding-top: 0.625em;
 	}
 
 	.copy{ padding-bottom: 0; }

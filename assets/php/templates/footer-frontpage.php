@@ -1,5 +1,5 @@
 
-<div role="contentinfo" in="in" data-in-mobile-after="#header" data-in-tablet-after="#main-container" data-in-standard-after="#main-container" class="row footer bg-blue">
+<div role="contentinfo" in="in" data-in-mobile-after="#header" data-in-tablet-after="#main-container" data-in-standard-after="#main-container" class="row footer bg-blue frontpage">
   <div class="container">
     <header class="footer-header">
       <h4 class="ta-center col-lg-12">We can help you quit smoking. Get started today.</h4>

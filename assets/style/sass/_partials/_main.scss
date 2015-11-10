@@ -1,4 +1,8 @@
 /* Css Changes */
+body{
+    overflow-x:hidden;
+}
+
 .nav-footer .item-phone a:after {
    bottom: -10px;
     content: "(800) QUIT-NOW";
@@ -41,7 +45,6 @@ code{   background: none !important;
     display: inline-block;
     font-weight: 700;
     line-height: 1em;
-
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
@@ -596,3 +599,21 @@ ul ul, ol ul, ul ol, ol ol {
     padding-top: 10px;
     font-weight: 400;
 }
+
+#stickyFooterContainer{
+    z-index: 100000    !important;
+    position: fixed !important;
+    bottom: 0 !important;
+    width: 100% !important;
+}
+.container.mainContent{
+    padding-bottom:150px;
+}
+.footer.frontpage{
+    .nav-footer a{
+        @include breakpoint(desktop) {
+            font-size:3em;
+        }
+    }
+}
+

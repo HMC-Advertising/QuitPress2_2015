@@ -1,5 +1,5 @@
 <?php get_header();  ?><?php if ( have_posts() ) : while ( have_posts() ) : the_post();  ?>
-<div class="container">
+<div class="container mainContent">
   <main role="main" class="main col-lg-9">
     <div class="main-indent">
       <h1 class="page-title"><?php if($post->post_parent):  ?><a href="<?php echo get_permalink($post->post_parent); ?>"><?php echo get_the_title($post->post_parent) ?><br/></a><?php echo get_the_title();  ?><?php else: ?><?php the_title();  ?><?php endif;   ?>
