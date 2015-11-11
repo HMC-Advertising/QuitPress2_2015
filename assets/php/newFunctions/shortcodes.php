@@ -157,53 +157,6 @@
 add_shortcode('vidTips', 'videos');
 
 
-//Google Map
-
-function googleMap($atts, $content = null){
-	extract(shortcode_atts(array(
-        'mobile' => ''
-    ), $atts));
-
-	$gm = "http://maps.googleapis.com/maps/api/js?key=AIzaSyD1n6pUKrhmbVb9_MAnvfkJlra6GcGPaJ0&sensor=false";
-
-	if($atts["mobile"] == "mobile"){
-		$gmJ =  get_template_directory_uri()."/js/googleAjaxM.js";
-	}
-	else{
-		$gmJ =  get_template_directory_uri()."/js/googleAjax.js";
-	}
-
-	$output = '<style type="text/css">#map-canvas img{max-width:none;}</style>'; //this will be moved to the CSS file later
-    $output .= '<div id="map-canvas" class="col-lg-12 col-sm-12" ></div>';
-   	$output .= '<script type="text/javascript" src="'.$gm.'"></script>';
-   	$output .= '<script type="text/javascript" src="'.$gmJ.'"></script>';
-
-    return $output;
-
-}
-
-//add_action( 'wp_enqueue_script', 'gmScripts' );
-add_shortcode('gmQuit', 'googleMap');
-
-function newGM(){
-	$output = '
-	<style type="text/css">#cm_map img{max-width:none;}</style>'; //this will be moved to the CSS file later
-    $output .= '<div id="cm_map" class="col-lg-12 col-sm-12" style="width:650px; height:500px; margin-bottom:20px;" ></div>
-
-
-<script src="http://maps.google.com/maps?file=api&v=2&key=AIzaSyD1n6pUKrhmbVb9_MAnvfkJlra6GcGPaJ0"
-  type="text/javascript"></script>
-
-
-
-<script src="'.get_template_directory_uri().'/js/googleMap2.js"
-  type="text/javascript"></script>
-   <script src="https://spreadsheets.google.com/feeds/list/0Ai8Hpiv1idXndDdsaDhoU0NfUjNodWk0Z09JQkF2Q2c/od6/public/values?alt=json-in-script&callback=cm_loadMapJSON" type="text/javascript" id="jsonScript"></script>
-  ';
-
-  return $output;
-}
-add_shortcode("new_gm", "newGM");
 
 function short_Calc($atts, $content = null){
 	$css = get_template_directory_uri().'/css/calCss.css';
@@ -255,45 +208,6 @@ function short_Calc($atts, $content = null){
 }
 add_shortcode('calculator', 'short_Calc');
 
-//extending the walker function to change the LI to divs in mobile
-class page_list_with_icons_Mobile extends Walker_Page {
-
-		function start_el( &$output, $page, $depth = 0, $args = array(), $current_page = 0){
-			$title_lower = strtolower($page->post_title);
-
-			if ( $depth )
-			        $indent = str_repeat("\t", $depth);
-			else
-			        $indent = '';
-			extract($args, EXTR_SKIP);
-			$css_class = array('page_item', 'page-item-'.$page->ID);
-			if( isset( $args['pages_with_children'][ $page->ID ] ) )
-			        $css_class[] = 'page_item_has_children';
-			if ( !empty($current_page) ) {
-			        $_current_page = get_post( $current_page );
-			        if ( in_array( $page->ID, $_current_page->ancestors ) )
-			                $css_class[] = 'current_page_ancestor';
-			        if ( $page->ID == $current_page )
-			                $css_class[] = 'current_page_item';
-			        elseif ( $_current_page && $page->ID == $_current_page->post_parent )
-			                $css_class[] = 'current_page_parent';
-			} elseif ( $page->ID == get_option('page_for_posts') ) {
-			        $css_class[] = 'current_page_parent';
-			}
-			$css_class = implode( ' ', apply_filters( 'page_css_class', $css_class, $page, $depth, $args, $current_page ) );
-			if ( '' === $page->post_title )
-			        $page->post_title = sprintf( __( '#%d (no title)' ), $page->ID );
-
-			$output .= $indent . '<div class="mobile ' . $css_class . ' item-' . $title_lower . '"><a href="' . get_permalink($page->ID) . '">' . $link_before . apply_filters( 'the_title', $page->post_title, $page->ID ) . $link_after . '<img src="' . get_bloginfo('template_url') .'/img/icon-' . $title_lower . '.png"></a></div>';
-			if ( !empty($show_date) ) {
-			        if ( 'modified' == $show_date )
-			                $time = $page->post_modified;
-			        else
-			                $time = $page->post_date;
-			        $output .= " " . mysql2date($date_format, $time);
-			}
-		}
-	}
 
 function youtube_videos($atts, $content = null ){
 	//this short code breaks apart the share url and makes it usable for an iframe
@@ -322,3 +236,52 @@ function youtube_videos($atts, $content = null ){
 
 }
 add_shortcode('youtube', 'youtube_videos');
+
+
+//Google Map
+
+function googleMap($atts, $content = null){
+	extract(shortcode_atts(array(
+        'mobile' => ''
+    ), $atts));
+
+	$gm = "http://maps.googleapis.com/maps/api/js?key=AIzaSyD1n6pUKrhmbVb9_MAnvfkJlra6GcGPaJ0&sensor=false";
+
+	if($atts["mobile"] == "mobile"){
+		$gmJ =  get_template_directory_uri()."/js/googleAjaxM.js";
+	}
+	else{
+		$gmJ =  get_template_directory_uri()."/js/googleAjax.js";
+	}
+
+	$output = '<style type="text/css">#map-canvas img{max-width:none;}</style>'; //this will be moved to the CSS file later
+    $output .= '<div id="map-canvas" class="col-lg-12 col-sm-12" ></div>';
+   	$output .= '<script type="text/javascript" src="'.$gm.'"></script>';
+   	$output .= '<script type="text/javascript" src="'.$gmJ.'"></script>';
+
+    return $output;
+
+}
+
+//add_action( 'wp_enqueue_script', 'gmScripts' );
+//add_shortcode('gmQuit', 'googleMap');
+
+function newGM(){
+	$output = '
+	<style type="text/css">#cm_map img{max-width:none;}</style>'; //this will be moved to the CSS file later
+    $output .= '<div id="cm_map" class="col-lg-12 col-sm-12" style="width:650px; height:500px; margin-bottom:20px;" ></div>
+
+
+<script src="http://maps.google.com/maps?file=api&v=2&key=AIzaSyD1n6pUKrhmbVb9_MAnvfkJlra6GcGPaJ0"
+  type="text/javascript"></script>
+
+
+
+<script src="'.get_template_directory_uri().'/js/googleMap2.js"
+  type="text/javascript"></script>
+   <script src="https://spreadsheets.google.com/feeds/list/0Ai8Hpiv1idXndDdsaDhoU0NfUjNodWk0Z09JQkF2Q2c/od6/public/values?alt=json-in-script&callback=cm_loadMapJSON" type="text/javascript" id="jsonScript"></script>
+  ';
+
+  return $output;
+}
+//add_shortcode("new_gm", "newGM");

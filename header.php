@@ -23,7 +23,7 @@
 		
 
 		<!--[if lt IE 9]>
-		<script src="<?php bloginfo('template_url'); ?>/js/lib/ie-ck.js"></script>
+		<script src="<?php bloginfo('template_url'); ?>/assets/script/plugin/lib/ie-ck.js"></script>
 		<![endif]-->
 		
 		<?php wp_head(); ?>

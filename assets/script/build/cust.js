@@ -68,11 +68,7 @@
          
           $(this).attr("src",url+char+"wmode=transparent");
     });
-
- }(jQuery))
-
-
-function hideMe(width){
+      function hideMe(width){
     if(/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ){
      
       $("#slider").height(parseInt($(".page_item").width())+100);
@@ -80,3 +76,8 @@ function hideMe(width){
     }
    
 }
+
+ }(jQuery))
+
+
+

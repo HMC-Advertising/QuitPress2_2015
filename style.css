@@ -18802,8 +18802,12 @@ ul.gfield_checkbox {
     overflow: hidden;
     position: relative;
   }
+  /* line 228, assets/style/sass/_partials/_main.scss */
+  .swipe-wrap a {
+    margin-left: 18px;
+  }
 
-  /* line 229, assets/style/sass/_partials/_main.scss */
+  /* line 232, assets/style/sass/_partials/_main.scss */
   .swipe-wrap > div {
     float: left;
     width: 100%;
@@ -18811,88 +18815,88 @@ ul.gfield_checkbox {
     padding: 60px;
   }
 
-  /* line 235, assets/style/sass/_partials/_main.scss */
+  /* line 238, assets/style/sass/_partials/_main.scss */
   .grid {
     padding: 0px;
   }
 }
-/* line 239, assets/style/sass/_partials/_main.scss */
+/* line 242, assets/style/sass/_partials/_main.scss */
 img.wp-image-848 {
   max-width: 100% !important;
 }
 
-/* line 244, assets/style/sass/_partials/_main.scss */
+/* line 247, assets/style/sass/_partials/_main.scss */
 .main ul, .main ol {
   margin-top: -10px;
 }
 
-/* line 248, assets/style/sass/_partials/_main.scss */
+/* line 251, assets/style/sass/_partials/_main.scss */
 ul.gform_fields {
   margin: 0 !important;
 }
 
-/* line 251, assets/style/sass/_partials/_main.scss */
+/* line 254, assets/style/sass/_partials/_main.scss */
 .gfield_radio {
   margin-top: 0 !important;
 }
 
-/* line 254, assets/style/sass/_partials/_main.scss */
+/* line 257, assets/style/sass/_partials/_main.scss */
 .collapseomatic_excerpt, .collapseomatic_content {
   margin-bottom: -40px;
 }
 
-/* line 258, assets/style/sass/_partials/_main.scss */
+/* line 261, assets/style/sass/_partials/_main.scss */
 .link-download, .link-audio, .link-pdf {
   padding-top: 5px;
 }
 
-/* line 262, assets/style/sass/_partials/_main.scss */
+/* line 265, assets/style/sass/_partials/_main.scss */
 .page-id-58 .link-download, .page-id-58 .link-pdf, .page-id-58 .link-audio {
   margin-bottom: 0px !important;
 }
 
-/* line 267, assets/style/sass/_partials/_main.scss */
+/* line 270, assets/style/sass/_partials/_main.scss */
 .page-id-58 .main ul {
   margin-top: -20px;
   padding-bottom: 0.5em;
 }
 
-/* line 272, assets/style/sass/_partials/_main.scss */
+/* line 275, assets/style/sass/_partials/_main.scss */
 .stories-quote {
   border-bottom: 1px solid #0DBDEE;
   margin-bottom: 1.25em;
   padding: 1em 0 2em;
 }
 
-/* line 278, assets/style/sass/_partials/_main.scss */
+/* line 281, assets/style/sass/_partials/_main.scss */
 .stories-quote .link-download, .stories-quote .link-pdf, .stories-quote .link-audio {
   margin-bottom: -10px !important;
 }
 
-/* line 282, assets/style/sass/_partials/_main.scss */
+/* line 285, assets/style/sass/_partials/_main.scss */
 .page-id-116 .footer {
   margin-top: 0px !important;
 }
 
-/* line 285, assets/style/sass/_partials/_main.scss */
+/* line 288, assets/style/sass/_partials/_main.scss */
 #map-canvas {
   margin-bottom: 20px;
 }
 
-/* line 289, assets/style/sass/_partials/_main.scss */
+/* line 292, assets/style/sass/_partials/_main.scss */
 a img.alignleft {
   float: left;
   margin: 5px 20px 5px 0;
 }
 
-/* line 293, assets/style/sass/_partials/_main.scss */
+/* line 296, assets/style/sass/_partials/_main.scss */
 #map-canvas {
   height: 500px;
   max-width: none;
   background: none;
 }
 
-/* line 297, assets/style/sass/_partials/_main.scss */
+/* line 300, assets/style/sass/_partials/_main.scss */
 #map-canvas.mobile {
   background-image: url("http://802quits.org/wordpress/wp-content/uploads/2013/12/Screen-Shot-2013-12-17-at-10.30.03-AM.png");
   background-position: center center;
@@ -18902,13 +18906,13 @@ a img.alignleft {
   width: 100% !important;
 }
 
-/* line 306, assets/style/sass/_partials/_main.scss */
+/* line 309, assets/style/sass/_partials/_main.scss */
 #map-canvas.mobile a {
   font-size: 15em !important;
   text-align: center !important;
 }
 
-/* line 311, assets/style/sass/_partials/_main.scss */
+/* line 314, assets/style/sass/_partials/_main.scss */
 .stLarge:before {
   color: #1D536F;
   content: "\f14d";
@@ -18916,7 +18920,7 @@ a img.alignleft {
   font-size: 26px;
 }
 
-/* line 317, assets/style/sass/_partials/_main.scss */
+/* line 320, assets/style/sass/_partials/_main.scss */
 .stLarge {
   background: none !important;
   margin-left: -6px;
@@ -18924,32 +18928,31 @@ a img.alignleft {
   margin-top: 4px;
 }
 
-/* line 324, assets/style/sass/_partials/_main.scss */
+/* line 327, assets/style/sass/_partials/_main.scss */
 hr.search {
   margin-bottom: 20px;
   max-width: 50%;
 }
 
-/* line 333, assets/style/sass/_partials/_main.scss */
+/* line 336, assets/style/sass/_partials/_main.scss */
 .copy a {
   color: #fff;
 }
 
-/* line 336, assets/style/sass/_partials/_main.scss */
+/* line 339, assets/style/sass/_partials/_main.scss */
 .copy a:hover {
   text-decoration: underline;
 }
 
-/* line 340, assets/style/sass/_partials/_main.scss */
+/* line 343, assets/style/sass/_partials/_main.scss */
 #map-canvas i {
   margin: 30px auto auto 80px;
   text-align: center;
 }
 
-/* line 345, assets/style/sass/_partials/_main.scss */
+/* line 350, assets/style/sass/_partials/_main.scss */
 .mobile.page_item:before {
   color: #0DBDEE;
-  content: "\f0d9";
   font-family: FontAwesome;
   float: left;
   font-size: 50px;
@@ -18957,10 +18960,9 @@ hr.search {
   margin-top: 42%;
 }
 
-/* line 354, assets/style/sass/_partials/_main.scss */
+/* line 359, assets/style/sass/_partials/_main.scss */
 .mobile.page_item:after {
   color: #0DBDEE;
-  content: "\f0da";
   float: right;
   font-family: FontAwesome;
   font-size: 50px;
@@ -18968,7 +18970,7 @@ hr.search {
   margin-top: -58%;
 }
 
-/* line 366, assets/style/sass/_partials/_main.scss */
+/* line 371, assets/style/sass/_partials/_main.scss */
 .right-triangle {
   width: 0;
   height: 0;
@@ -18978,17 +18980,17 @@ hr.search {
   float: left;
 }
 
-/* line 374, assets/style/sass/_partials/_main.scss */
+/* line 379, assets/style/sass/_partials/_main.scss */
 .right-triangle.white {
   border-left: 20px solid #fff;
 }
 
-/* line 378, assets/style/sass/_partials/_main.scss */
+/* line 383, assets/style/sass/_partials/_main.scss */
 .right-triangle.blue {
   border-left: 20px solid #2cc2ee;
 }
 
-/* line 382, assets/style/sass/_partials/_main.scss */
+/* line 387, assets/style/sass/_partials/_main.scss */
 .chooseFrom {
   background: none repeat scroll 0 0 #2cc2ee;
   height: auto;
@@ -18997,14 +18999,14 @@ hr.search {
   display: inline-block;
 }
 
-/* line 390, assets/style/sass/_partials/_main.scss */
+/* line 395, assets/style/sass/_partials/_main.scss */
 .chooseFromContainer {
   height: 52px;
   margin-top: 10px;
   max-width: 467px;
 }
 
-/* line 397, assets/style/sass/_partials/_main.scss */
+/* line 402, assets/style/sass/_partials/_main.scss */
 .chooseFromText {
   background: none !important;
   border-radius: 5px 0 0 5px;
@@ -19019,71 +19021,71 @@ hr.search {
 }
 
 @media (max-width: 1040px) {
-  /* line 411, assets/style/sass/_partials/_main.scss */
+  /* line 416, assets/style/sass/_partials/_main.scss */
   .chooseFromText {
     font-size: 1em !important;
   }
 
-  /* line 414, assets/style/sass/_partials/_main.scss */
+  /* line 419, assets/style/sass/_partials/_main.scss */
   .chooseFrom {
     width: 90% !important;
   }
 }
 @media (max-width: 785px) {
-  /* line 420, assets/style/sass/_partials/_main.scss */
+  /* line 425, assets/style/sass/_partials/_main.scss */
   .chooseFromText {
     font-size: 0.9em !important;
   }
 }
 @media (max-width: 785px) {
-  /* line 427, assets/style/sass/_partials/_main.scss */
+  /* line 432, assets/style/sass/_partials/_main.scss */
   .chooseFromContainer {
     margin: auto;
   }
 }
-/* line 432, assets/style/sass/_partials/_main.scss */
+/* line 437, assets/style/sass/_partials/_main.scss */
 .chooseFromText.M {
   font-size: 0.8em !important;
 }
 
-/* line 437, assets/style/sass/_partials/_main.scss */
+/* line 442, assets/style/sass/_partials/_main.scss */
 .chooseFrom.M {
   width: 300px !important;
 }
 
-/* line 441, assets/style/sass/_partials/_main.scss */
+/* line 446, assets/style/sass/_partials/_main.scss */
 .chooseFromContainer.M {
   margin-left: 30px;
 }
 
 @media (min-width: 770px) and (max-width: 1024px) {
-  /* line 446, assets/style/sass/_partials/_main.scss */
+  /* line 451, assets/style/sass/_partials/_main.scss */
   h3.M {
     padding: 10px;
   }
 }
-/* line 451, assets/style/sass/_partials/_main.scss */
+/* line 456, assets/style/sass/_partials/_main.scss */
 .mobileArrow {
   margin-top: 24px;
 }
 
-/* line 456, assets/style/sass/_partials/_main.scss */
+/* line 461, assets/style/sass/_partials/_main.scss */
 .nav-footer .item-own a small {
   font-size: 0.365em;
   padding-top: 0;
 }
 
-/* line 460, assets/style/sass/_partials/_main.scss */
+/* line 465, assets/style/sass/_partials/_main.scss */
 .nav-footer a small {
   font-size: 0.365em;
 }
 
-/* line 463, assets/style/sass/_partials/_main.scss */
+/* line 468, assets/style/sass/_partials/_main.scss */
 span.hidden-lg.hidden-xs.hidden-sm.hidden-xxs {
   line-height: 0;
 }
 
-/* line 466, assets/style/sass/_partials/_main.scss */
+/* line 471, assets/style/sass/_partials/_main.scss */
 .greenInset {
   background: #3AB2A6;
   color: #ffffff;
@@ -19092,7 +19094,7 @@ span.hidden-lg.hidden-xs.hidden-sm.hidden-xxs {
   margin-bottom: 25px;
 }
 
-/* line 473, assets/style/sass/_partials/_main.scss */
+/* line 478, assets/style/sass/_partials/_main.scss */
 .greenInset.blue {
   background: #1C536E;
   color: #ffffff;
@@ -19102,19 +19104,19 @@ span.hidden-lg.hidden-xs.hidden-sm.hidden-xxs {
   padding-bottom: 3px;
 }
 
-/* line 481, assets/style/sass/_partials/_main.scss */
+/* line 486, assets/style/sass/_partials/_main.scss */
 .greenInset h3 {
   color: #fff;
   margin-top: -20px;
 }
 
-/* line 485, assets/style/sass/_partials/_main.scss */
+/* line 490, assets/style/sass/_partials/_main.scss */
 .greenInset.blue h3 {
   color: #fff;
   margin-top: -20px;
 }
 
-/* line 489, assets/style/sass/_partials/_main.scss */
+/* line 494, assets/style/sass/_partials/_main.scss */
 .greenInset img {
   float: right;
   max-height: 150px;
@@ -19128,7 +19130,7 @@ span.hidden-lg.hidden-xs.hidden-sm.hidden-xxs {
   transform: rotate(15deg);
 }
 
-/* line 501, assets/style/sass/_partials/_main.scss */
+/* line 506, assets/style/sass/_partials/_main.scss */
 .greenInset.blue img {
   float: right;
   position: relative;
@@ -19142,49 +19144,49 @@ span.hidden-lg.hidden-xs.hidden-sm.hidden-xxs {
   transform: none;
 }
 
-/* line 513, assets/style/sass/_partials/_main.scss */
+/* line 518, assets/style/sass/_partials/_main.scss */
 .greenInset.blue a {
   color: #44B5A6 !important;
 }
 
-/* line 516, assets/style/sass/_partials/_main.scss */
+/* line 521, assets/style/sass/_partials/_main.scss */
 .greenInset.blue a:hover {
   color: #ffffff !important;
 }
 
-/* line 519, assets/style/sass/_partials/_main.scss */
+/* line 524, assets/style/sass/_partials/_main.scss */
 img.siteLarge {
   max-width: 100% !important;
 }
 
-/* line 523, assets/style/sass/_partials/_main.scss */
+/* line 528, assets/style/sass/_partials/_main.scss */
 h2.siteLarge {
   margin-top: -25px !important;
   margin-bottom: -30px !important;
 }
 
-/* line 528, assets/style/sass/_partials/_main.scss */
+/* line 533, assets/style/sass/_partials/_main.scss */
 h3.siteLarge {
   margin-bottom: -15px !important;
   margin-top: -10px !important;
 }
 
-/* line 533, assets/style/sass/_partials/_main.scss */
+/* line 538, assets/style/sass/_partials/_main.scss */
 a.button.front, .nav-footer a.front {
   background: linear-gradient(to bottom, #a2b801, #80900d) !important;
 }
 
-/* line 538, assets/style/sass/_partials/_main.scss */
+/* line 543, assets/style/sass/_partials/_main.scss */
 #event a {
   border: none !important;
 }
 
-/* line 541, assets/style/sass/_partials/_main.scss */
+/* line 546, assets/style/sass/_partials/_main.scss */
 #event a:hover {
   background: none !important;
 }
 
-/* line 545, assets/style/sass/_partials/_main.scss */
+/* line 550, assets/style/sass/_partials/_main.scss */
 a {
   font-weight: 600;
   border-bottom: solid 2px transparent;
@@ -19194,24 +19196,24 @@ a {
   transition: 0.3s ease all;
 }
 
-/* line 553, assets/style/sass/_partials/_main.scss */
+/* line 558, assets/style/sass/_partials/_main.scss */
 p a:hover, .main-indent ul li a:hover {
   color: #2a6496;
   border-bottom: 2px solid #0dbdee;
 }
 
-/* line 558, assets/style/sass/_partials/_main.scss */
+/* line 563, assets/style/sass/_partials/_main.scss */
 ul ul, ol ul, ul ol, ol ol {
   margin-bottom: -17px;
   margin-top: 14px !important;
 }
 
-/* line 563, assets/style/sass/_partials/_main.scss */
+/* line 568, assets/style/sass/_partials/_main.scss */
 ul ul, ol ul {
   list-style: circle !important;
 }
 
-/* line 567, assets/style/sass/_partials/_main.scss */
+/* line 572, assets/style/sass/_partials/_main.scss */
 .linkButton {
   display: block;
   background-color: #1d536f;
@@ -19221,7 +19223,7 @@ ul ul, ol ul {
   margin-bottom: 10px;
 }
 
-/* line 576, assets/style/sass/_partials/_main.scss */
+/* line 581, assets/style/sass/_partials/_main.scss */
 .linkButton .images {
   top: 15px;
   right: -13px;
@@ -19229,32 +19231,32 @@ ul ul, ol ul {
   float: right;
 }
 
-/* line 584, assets/style/sass/_partials/_main.scss */
+/* line 589, assets/style/sass/_partials/_main.scss */
 .linkButton .images img {
   width: 200px;
   max-height: 200px;
 }
 
-/* line 588, assets/style/sass/_partials/_main.scss */
+/* line 593, assets/style/sass/_partials/_main.scss */
 .linkButton .con {
   width: 64%;
 }
 
-/* line 591, assets/style/sass/_partials/_main.scss */
+/* line 596, assets/style/sass/_partials/_main.scss */
 .linkButton .con h3 {
   color: #ffffff;
   margin-bottom: -20px;
   font-size: 23px;
 }
 
-/* line 597, assets/style/sass/_partials/_main.scss */
+/* line 602, assets/style/sass/_partials/_main.scss */
 .linkButton .con p {
   color: #ffffff;
   padding-top: 10px;
   font-weight: 400;
 }
 
-/* line 603, assets/style/sass/_partials/_main.scss */
+/* line 608, assets/style/sass/_partials/_main.scss */
 #stickyFooterContainer {
   z-index: 100000    !important;
   position: fixed !important;
@@ -19262,16 +19264,22 @@ ul ul, ol ul {
   width: 100% !important;
 }
 
-/* line 609, assets/style/sass/_partials/_main.scss */
+/* line 614, assets/style/sass/_partials/_main.scss */
 .container.mainContent {
   padding-bottom: 150px;
 }
 
 @media (min-width: 992px) {
-  /* line 613, assets/style/sass/_partials/_main.scss */
+  /* line 618, assets/style/sass/_partials/_main.scss */
   .footer.frontpage .nav-footer a {
     font-size: 3em;
   }
+}
+
+/* line 626, assets/style/sass/_partials/_main.scss */
+.nav-reasons-title {
+  bottom: -37px !important;
+  font-size: 30px !important;
 }
 
 @media only screen and (max-width: 400px) {

@@ -1,4 +1,4 @@
-(function() {
+/*(function() {
    tinymce.create('tinymce.plugins.pageintro', {
       init : function(ed, url) {
          ed.addButton('pageintro', {
@@ -24,4 +24,4 @@
       }
    });
    tinymce.PluginManager.add('pageintro', tinymce.plugins.pageintro);
-})();
+})();*/

@@ -225,6 +225,9 @@ ul.gfield_checkbox{
 .swipe-wrap {
   overflow: hidden;
   position: relative;
+  a{
+    margin-left:18px;
+  }
 }
 .swipe-wrap > div {
     float:left;
@@ -342,9 +345,11 @@ hr.search {
     text-align: center;
 }
 
+
+
 .mobile.page_item:before{
     color: #0DBDEE;
-    content: "\f0d9";
+    //content: "\f0d9";
     font-family: FontAwesome;
     float: left;
     font-size: 50px;
@@ -353,7 +358,7 @@ hr.search {
 }
 .mobile.page_item:after{
     color: #0DBDEE;
-    content: "\f0da";
+   // content: "\f0da";
     float: right;
     font-family: FontAwesome;
     font-size: 50px;
@@ -616,4 +621,10 @@ ul ul, ol ul, ul ol, ol ol {
         }
     }
 }
+
+
+    .nav-reasons-title{
+        bottom:-37px !important;
+        font-size:30px !important;
+    } 
 

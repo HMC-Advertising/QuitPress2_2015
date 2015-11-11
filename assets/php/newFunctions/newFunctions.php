@@ -66,7 +66,7 @@
 	    }
 	}
 
-		function namespace_add_custom_types( $query ) {
+	function namespace_add_custom_types( $query ) {
 		if( is_category() || is_tag() && empty( $query->query_vars['suppress_filters'] ) ) {
 		    $query->set( 'post_type', array(
 		    	'post', 'tip', 'nav_menu_item', 'stories'

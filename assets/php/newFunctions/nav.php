@@ -68,4 +68,49 @@
 		}
 	}
 
+	//extending the walker function to change the LI to divs in mobile
+class page_list_with_icons_Mobile extends Walker_Page {
+
+		function start_el( &$output, $page, $depth = 0, $args = array(), $current_page = 0){
+			$title_lower = strtolower($page->post_title);
+
+			if ( $depth )
+			        $indent = str_repeat("\t", $depth);
+			else
+			        $indent = '';
+			extract($args, EXTR_SKIP);
+			$css_class = array('page_item', 'page-item-'.$page->ID);
+			if( isset( $args['pages_with_children'][ $page->ID ] ) )
+			        $css_class[] = 'page_item_has_children';
+			if ( !empty($current_page) ) {
+			        $_current_page = get_post( $current_page );
+			        if ( in_array( $page->ID, $_current_page->ancestors ) )
+			                $css_class[] = 'current_page_ancestor';
+			        if ( $page->ID == $current_page )
+			                $css_class[] = 'current_page_item';
+			        elseif ( $_current_page && $page->ID == $_current_page->post_parent )
+			                $css_class[] = 'current_page_parent';
+			} elseif ( $page->ID == get_option('page_for_posts') ) {
+			        $css_class[] = 'current_page_parent';
+			}
+			$css_class = implode( ' ', apply_filters( 'page_css_class', $css_class, $page, $depth, $args, $current_page ) );
+			if ( '' === $page->post_title )
+			        $page->post_title = sprintf( __( '#%d (no title)' ), $page->ID );
+
+			//$output .="<i class='fa fa-caret-left'></i>";    
+
+			$output .= $indent . '<div class="mobile ' . $css_class . ' item-' . $title_lower . '"><a href="' . get_permalink($page->ID) . '">' . $link_before . apply_filters( 'the_title', $page->post_title, $page->ID ) . $link_after . '<img src="' . get_bloginfo('template_url') .'/assets/img/icon-' . $title_lower . '.png"></a></div>';
+			if ( !empty($show_date) ) {
+			        if ( 'modified' == $show_date )
+			                $time = $page->post_modified;
+			        else
+			                $time = $page->post_date;
+			        $output .= " " . mysql2date($date_format, $time);
+			}
+
+			//$output .="<i class='fa fa-caret-right'></i>";  
+		}
+}
+
+
 ?>

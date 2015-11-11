@@ -13,40 +13,37 @@ function theme_scripts() {
 
 	//scripts------------------------------------------------------------------
 	//header
+	wp_enqueue_script("jquery");
 	
-	 wp_enqueue_script("jquery");
+	
 
-	
+
+
 
 	//in the footer
 	wp_register_script( 'name 2', 'url2', false, false, true );
-	wp_register_script( 'frontpage',get_template_directory_uri(). '/assets/script/frontpagejs.js', false, false, true );
-	wp_register_script( 'swipe', get_template_directory_uri(). '/assets/script/swipe.js', false, false, true );
-	wp_register_script( 'cookie', get_template_directory_uri(). '/assets/script/scripts-ck.js', false, false, true );
-	wp_register_script( 'inter', get_template_directory_uri(). '/assets/script/cust.js', false, false, true );
+	wp_register_script( 'swipe', get_template_directory_uri(). '/assets/script/plugin/swipe.js', false, false, true );
+	wp_register_script( 'cookie', get_template_directory_uri(). '/assets/script/plugin/scripts-ck.js', false, false, true );
+	wp_register_script( 'main-min', get_template_directory_uri(). '/assets/script/main.min.js', false, false, true );
 	wp_register_script( 'bootstrap', get_template_directory_uri(). '/assets/script/plugin/bootstrap/bootstrap.min.js', false, false, true );
 	
-
-
+	wp_enqueue_script( 'bootstrap' );
 
 	//fontpage
 	if(is_front_page()):
-		wp_enqueue_script( 'bootstrap' );
-		wp_enqueue_script( 'frontpage' );
 		wp_enqueue_script( 'swipe' );
 		wp_enqueue_script( 'cookie' );
 	endif;	
-	
 
-	//interiour page
-	if(!is_front_page()):
-		wp_enqueue_script( 'inter' );
-	endif;
+	wp_enqueue_script( 'main-min' );
+	
 
 	//tax-stories
 	if(is_page("taxonomy-stories.php")): 
 		wp_enqueue_script( 'swipe' );
 	endif;
+
+	//plugins
 
 }
 add_action( 'wp_enqueue_scripts', 'theme_scripts' );
