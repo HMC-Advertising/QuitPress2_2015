@@ -7,6 +7,7 @@
 			get_template_part("assets/php/templates/footer","inter"); 
 		endif; ?>
 
+	
 		
 		
 		<?php /* if(is_page("Free Quit Help for You and Your Baby") ):
@@ -23,6 +24,7 @@
 				get_template_part("assets/php/templates/footer-baby3");
 			 endif; 
 		 endif; */ ?>	
+
 
 		<?php wp_footer(); ?>
 		

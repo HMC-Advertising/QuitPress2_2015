@@ -132,7 +132,7 @@ article.results .button{
 }
 
 select {
-     background: url("img/module-link.jpg") no-repeat 95%;
+     background: url("assets/img/module-link.jpg") no-repeat 95%;
      background-size: 3% 54% ;
    border: 2px solid #CEDFEF;
     border-radius: 12px;
@@ -569,41 +569,7 @@ ul ul, ol ul, ul ol, ol ol {
     list-style: circle !important;
   }
 
-.linkButton{
-    display: block;
-    background-color: #1d536f;
-    height: 280px;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
 
-.linkButton .images {
-    top: 15px;
-    right: -13px;
-    position: relative;
-    
-    float:right;
-}
-
-.linkButton .images img {
-    width: 200px;
-    max-height: 200px;
-}
-.linkButton .con{
-    width:64%;
-}
-.linkButton .con h3{
-    color: #ffffff;
-    margin-bottom: -20px;
-    font-size: 23px;
-}
-
-.linkButton .con p{
-    color: #ffffff;
-    padding-top: 10px;
-    font-weight: 400;
-}
 
 #stickyFooterContainer{
     z-index: 100000    !important;
@@ -627,4 +593,92 @@ ul ul, ol ul, ul ol, ol ol {
         bottom:-37px !important;
         font-size:30px !important;
     } 
+
+.pro-sidebar{
+    top: -2350px;
+    position: relative;
+    right: 0px;
+    width:275px;
+    .module{
+        width:252px !important; 
+    }
+}
+
+form.gplaceholder{
+    .large{
+        width:100%;
+    }
+    #input_5_2_4_label, #input_4_2_4_label{
+        display: none;
+    }
+    #input_5_2_5, #input_4_2_5{
+        width: 100%;
+    }
+    #field_5_2, #field_4_1, #field_4_2, #field_5_1, #field_6_1{
+        input{
+           
+            &#input_5_2_1, &#input_4_1_3,  &#input_5_1_3, &#input_4_2_1, &#input_6_1_3{
+                margin-right:1% !important;
+                 width:49% !important;
+            }
+            &#input_5_2_3, &#input_4_1_6,  &#input_5_1_6, &#input_4_2_3, &#input_6_1_6{
+                width:50% !important;
+                margin-right:0 !important;
+            }
+        }
+    }
+   
+    ul{
+        list-style :none !important;
+        padding-left:0 !important;
+        margin-left:0 !important;
+        li{
+
+        }
+    }
+    select{
+        margin-bottom:5px;
+         border-radius: 5px !important;
+         border: 2px solid #CEDFEF;
+            padding: 5px;
+    }
+    label{
+        margin-right:5px;
+    }
+    textarea{
+         border: 2px solid #CEDFEF;
+            padding: 5px;
+    }
+    input{
+        margin-bottom: 5px;
+        margin-right:5px;
+        border-radius: 5px !important;
+        &[type="submit"]{
+            color: $white !important;
+            background: $cyan !important;
+            border:none !important;
+            padding: 15px;
+            padding-left: 50px;
+            padding-right: 50px;
+           
+            &#gform_submit_button_5{
+                 top: -80px !important;
+                position: relative;
+            }
+            &:hover{
+                background:$blue !important;
+
+            }
+        }
+        &[type="text"], &[type="tel"], &[type="email"]{
+            border: 2px solid #CEDFEF;
+            padding: 5px;
+        }
+    }
+    .gform_validation_container{
+        visibility: hidden;
+    }
+}
+
+
 

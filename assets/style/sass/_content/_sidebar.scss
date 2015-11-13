@@ -38,31 +38,34 @@
 	}
 }
 
-.module-title,
-.module-text{
-	padding: 0; margin: 0;
-}
 
-.module-title{
-	color: $violet;
-	font: bold 1.325em $font-body;
-	padding-bottom: 0.5em;
-}
-
-.module-text{
-	color: $blue;
-}
 
 .module{
 	display: block;
-	border: solid 3px $gray-light;
-	border-radius: 12px;
-	background: url('img/module-link.jpg') 95% center no-repeat;
-	padding: 1.25em 3em 1.25em 1.25em;
+	border: solid 3px $gray-light !important;
+	border-radius: 12px !important;
+	background: url('assets/img/module-link.jpg') 95% center no-repeat !important;
+	padding: 1.25em 3em 1.25em 1.25em !important;
 	@include transition(0.3s ease all);
 
 	&:hover{
-		border-color: $violet;
-		background-position-x: 92%;
+		border-color: $violet !important;
+		background-position-x: 92% !important;
+	}
+
+	.module-title,.module-text{
+		padding: 0 !important; 
+		margin: 0 !important;
+	}
+
+	.module-title{
+		color: $violet !important;
+		font: bold 23px $font-body !important;
+		padding-bottom: 0.5em !important;
+	}
+
+	.module-text{
+		color: $blue !important;
+		font: bold 12px $font-body !important;
 	}
 }

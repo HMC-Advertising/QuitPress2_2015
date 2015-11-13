@@ -4,17 +4,17 @@ aside(class="sidebar col-xs-12 col-md-3 col-lg-3")
 			- $real_stories = get_ID_by_slug('real-stories'); 
 			- $stories_nav = array('child_of' => $real_stories,'title_li' => '','depth' => 0); 
 			- wp_list_pages($stories_nav); 
-		- while ( have_posts() ) : the_post(); 
-			- if (get_field('callout_picker')) : 
-				- foreach(get_field('callout_picker') as $post): 
-					- setup_postdata($post); 
-						section
-							a(href!="<?php the_field('link'); ?>" class="module")
-								h5(class="module-title")
-									- the_field('title'); 
-								
-								p(class="module-text")
-									- the_field('text'); 
-				- endforeach; wp_reset_postdata(); 
-			- endif; 
-		- endwhile; 
+	- while ( have_posts() ) : the_post(); 
+		- if (get_field('callout_picker')) : 
+			- foreach(get_field('callout_picker') as $post): 
+				- setup_postdata($post); 
+					section
+						a(href!="<?php the_field('link'); ?>" class="module")
+							h5(class="module-title")
+								- the_field('title'); 
+							
+							p(class="module-text")
+								- the_field('text'); 
+			- endforeach; wp_reset_postdata(); 
+		- endif; 
+	- endwhile; 

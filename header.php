@@ -58,6 +58,39 @@
 			});
 			}
 		</script> 
+		<?php
+		//these calulator files will be gone once the calulator plugin is finished
+		 if(is_page_template("temp_cal.php") or is_page_template("temp_report.php")): ?>
+
+
+		<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.3.0/build/cssreset/reset-min.css">
+		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/cal/styles/aristo/jquery-ui-1.8.7.custom.css">
+		
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/cal/scripts/autoNumeric-1.6.2.js"></script>
+		
+
+
+<?php endif; ?>
+<?php if(is_page_template("temp_cal.php") ):?>
+	<!--[if !IE]><!-->
+        	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/cal/styles/main.css">
+        	
+
+ 		<!--<![endif]-->
+		<!--[if lt IE 9]>
+       		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/cal/styles/main-ie.css" />
+		<![endif]-->
+		
+<?php endif; ?>
+
+<?php if(is_page_template("temp_report.php")):?>
+	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/cal/styles/report.css">
+		<!--[if lt IE 9]>
+       		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/cal/styles/report-ie.css" />
+		<![endif]-->
+<?php endif; ?>
 	</head>
 	
 	<body <?php body_class(); ?>>

@@ -6,6 +6,21 @@ div(class="row footer bg-blue frontpage" role="contentinfo" in data-in-mobile-af
 			div(class="col-lg-12")
 				- wp_nav_menu( array( 'theme_location' => 'Main Navigation', 'menu' => 'Main Navigation','container' => 'false','walker'=> new menu_with_description));
 
+	-if(!is_mobile() ):
+	footer(class="footer-bottom-wrap bg-blue")
+		div(class="footer-bottom")
+			div(class="container")
+				div(class="col-lg-12")
+					- if(!is_mobile()): 
+						a(href!="<?php echo home_url(); ?>/providers/" class!="button for-providers<?php if(get_the_title()=='Information for Health Care Providers')echo 'on'; ?>") For Providers
+					- endif;
+					span(class="copy") &copy; <?php the_time('Y'); ?> 
+						a(href="http://healthvermont.gov/prevent/tobacco/index.aspx" target="_blank") Vermont Department of Health
+					- wp_nav_menu( array('theme_location' => 'Footer Navigation','menu' => 'Footer Navigation','container' => false,'menu_class' => 'nav-footer-secondary') );  
+	-endif;
+
+	
+- if(is_mobile() ):
 footer(class="footer-bottom-wrap bg-blue")
 	div(class="footer-bottom")
 		div(class="container")
@@ -15,8 +30,9 @@ footer(class="footer-bottom-wrap bg-blue")
 				- endif;
 				span(class="copy") &copy; <?php the_time('Y'); ?> 
 					a(href="http://healthvermont.gov/prevent/tobacco/index.aspx" target="_blank") Vermont Department of Health
-				- wp_nav_menu( array('theme_location' => 'Footer Navigation','menu' => 'Footer Navigation','container' => false,'menu_class' => 'nav-footer-secondary') ); 
-				
+				- wp_nav_menu( array('theme_location' => 'Footer Navigation','menu' => 'Footer Navigation','container' => false,'menu_class' => 'nav-footer-secondary') );  
+-endif;
+	
 
 <!-- Tag for Activity Group: IP158044: Vermont Anti-Smoking, Activity Name: Homepage~IP158044, Activity ID: 2311432 -->
 <!-- Expected URL: http://www.802quits.org/ -->
