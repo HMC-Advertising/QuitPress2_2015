@@ -19263,7 +19263,7 @@ form.gplaceholder #input_5_2_5, form.gplaceholder #input_4_2_5 {
 /* line 620, assets/style/sass/_partials/_main.scss */
 form.gplaceholder #field_5_2 input#input_5_2_1, form.gplaceholder #field_5_2 input#input_4_1_3, form.gplaceholder #field_5_2 input#input_5_1_3, form.gplaceholder #field_5_2 input#input_4_2_1, form.gplaceholder #field_5_2 input#input_6_1_3, form.gplaceholder #field_4_1 input#input_5_2_1, form.gplaceholder #field_4_1 input#input_4_1_3, form.gplaceholder #field_4_1 input#input_5_1_3, form.gplaceholder #field_4_1 input#input_4_2_1, form.gplaceholder #field_4_1 input#input_6_1_3, form.gplaceholder #field_4_2 input#input_5_2_1, form.gplaceholder #field_4_2 input#input_4_1_3, form.gplaceholder #field_4_2 input#input_5_1_3, form.gplaceholder #field_4_2 input#input_4_2_1, form.gplaceholder #field_4_2 input#input_6_1_3, form.gplaceholder #field_5_1 input#input_5_2_1, form.gplaceholder #field_5_1 input#input_4_1_3, form.gplaceholder #field_5_1 input#input_5_1_3, form.gplaceholder #field_5_1 input#input_4_2_1, form.gplaceholder #field_5_1 input#input_6_1_3, form.gplaceholder #field_6_1 input#input_5_2_1, form.gplaceholder #field_6_1 input#input_4_1_3, form.gplaceholder #field_6_1 input#input_5_1_3, form.gplaceholder #field_6_1 input#input_4_2_1, form.gplaceholder #field_6_1 input#input_6_1_3 {
   margin-right: 1% !important;
-  width: 49% !important;
+  width: 48% !important;
 }
 /* line 624, assets/style/sass/_partials/_main.scss */
 form.gplaceholder #field_5_2 input#input_5_2_3, form.gplaceholder #field_5_2 input#input_4_1_6, form.gplaceholder #field_5_2 input#input_5_1_6, form.gplaceholder #field_5_2 input#input_4_2_3, form.gplaceholder #field_5_2 input#input_6_1_6, form.gplaceholder #field_4_1 input#input_5_2_3, form.gplaceholder #field_4_1 input#input_4_1_6, form.gplaceholder #field_4_1 input#input_5_1_6, form.gplaceholder #field_4_1 input#input_4_2_3, form.gplaceholder #field_4_1 input#input_6_1_6, form.gplaceholder #field_4_2 input#input_5_2_3, form.gplaceholder #field_4_2 input#input_4_1_6, form.gplaceholder #field_4_2 input#input_5_1_6, form.gplaceholder #field_4_2 input#input_4_2_3, form.gplaceholder #field_4_2 input#input_6_1_6, form.gplaceholder #field_5_1 input#input_5_2_3, form.gplaceholder #field_5_1 input#input_4_1_6, form.gplaceholder #field_5_1 input#input_5_1_6, form.gplaceholder #field_5_1 input#input_4_2_3, form.gplaceholder #field_5_1 input#input_6_1_6, form.gplaceholder #field_6_1 input#input_5_2_3, form.gplaceholder #field_6_1 input#input_4_1_6, form.gplaceholder #field_6_1 input#input_5_1_6, form.gplaceholder #field_6_1 input#input_4_2_3, form.gplaceholder #field_6_1 input#input_6_1_6 {
@@ -19295,7 +19295,6 @@ form.gplaceholder textarea {
 /* line 652, assets/style/sass/_partials/_main.scss */
 form.gplaceholder input {
   margin-bottom: 5px;
-  margin-right: 5px;
   border-radius: 5px !important;
 }
 /* line 656, assets/style/sass/_partials/_main.scss */
@@ -19324,6 +19323,54 @@ form.gplaceholder input[type="text"], form.gplaceholder input[type="tel"], form.
 /* line 678, assets/style/sass/_partials/_main.scss */
 form.gplaceholder .gform_validation_container {
   visibility: hidden;
+}
+
+/* line 683, assets/style/sass/_partials/_main.scss */
+a.link-audio, label.link-audio {
+  display: block;
+  margin-bottom: 15px;
+}
+/* line 686, assets/style/sass/_partials/_main.scss */
+a.link-audio:before, label.link-audio:before {
+  content: "\f001";
+  font-family: FontAwesome;
+  font-size: 30px;
+  color: #0dbdee;
+  padding-right: 14px;
+}
+/* line 696, assets/style/sass/_partials/_main.scss */
+a.link-pdf, label.link-pdf {
+  display: block;
+  margin-bottom: 15px;
+}
+/* line 699, assets/style/sass/_partials/_main.scss */
+a.link-pdf:before, label.link-pdf:before {
+  content: "\f15c";
+  font-family: FontAwesome;
+  font-size: 30px;
+  color: #0dbdee;
+  padding-right: 14px;
+}
+/* line 709, assets/style/sass/_partials/_main.scss */
+a.link-download, label.link-download {
+  display: block;
+  margin-bottom: 15px;
+}
+/* line 712, assets/style/sass/_partials/_main.scss */
+a.link-download:before, label.link-download:before {
+  content: "\f019";
+  font-family: FontAwesome;
+  font-size: 30px;
+  color: #0dbdee;
+  padding-right: 14px;
+}
+
+/* line 726, assets/style/sass/_partials/_main.scss */
+.people {
+  display: block;
+  margin-top: 20px;
+  height: auto;
+  overflow: auto;
 }
 
 @media only screen and (max-width: 400px) {

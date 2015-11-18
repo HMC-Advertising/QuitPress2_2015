@@ -619,7 +619,7 @@ form.gplaceholder{
            
             &#input_5_2_1, &#input_4_1_3,  &#input_5_1_3, &#input_4_2_1, &#input_6_1_3{
                 margin-right:1% !important;
-                 width:49% !important;
+                 width:48% !important;
             }
             &#input_5_2_3, &#input_4_1_6,  &#input_5_1_6, &#input_4_2_3, &#input_6_1_6{
                 width:50% !important;
@@ -651,7 +651,7 @@ form.gplaceholder{
     }
     input{
         margin-bottom: 5px;
-        margin-right:5px;
+       // margin-right:5px;
         border-radius: 5px !important;
         &[type="submit"]{
             color: $white !important;
@@ -679,6 +679,51 @@ form.gplaceholder{
         visibility: hidden;
     }
 }
+a, label{
+    &.link-audio{
+        display: block;
+        margin-bottom: 15px;
+        &:before{
+            content: "\f001";
+            font:{
+                family:FontAwesome;
+                size:30px;
+            }
+            color:$cyan;
+            padding-right:14px;
+        }
+    }
+    &.link-pdf{
+        display: block;
+        margin-bottom: 15px;
+         &:before{
+            content: "\f15c";
+             font:{
+                family:FontAwesome;
+                size:30px;
+            }
+            color:$cyan;
+            padding-right:14px;
+        }
+    }
+    &.link-download{
+        display: block;
+        margin-bottom: 15px;
+         &:before{
+            content: "\f019";
+             font:{
+                family:FontAwesome;
+                size:30px;
+            }
+            color:$cyan;
+            padding-right:14px;
+        }
+    }
+}
 
 
 
+.people{
+display:block; margin-top:20px;height: auto;overflow: auto;
+    
+}
