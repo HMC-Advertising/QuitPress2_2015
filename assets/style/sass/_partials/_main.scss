@@ -495,7 +495,8 @@ span.hidden-lg.hidden-xs.hidden-sm.hidden-xxs{
     float: right;
     max-height: 150px;
     position: relative;
-    top: -50px;
+    top: 16px;
+    right:-12px;
     width: 75px;
     -webkit-transform: rotate(15deg);
        -moz-transform: rotate(15deg);
@@ -724,6 +725,6 @@ a, label{
 
 
 .people{
-display:block; margin-top:20px;height: auto;overflow: auto;
-    
+display:block; margin-top:20px;height: auto;overflow: auto
+
 }

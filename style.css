@@ -19118,7 +19118,8 @@ span.hidden-lg.hidden-xs.hidden-sm.hidden-xxs {
   float: right;
   max-height: 150px;
   position: relative;
-  top: -50px;
+  top: 16px;
+  right: -12px;
   width: 75px;
   -webkit-transform: rotate(15deg);
   -moz-transform: rotate(15deg);
@@ -19127,7 +19128,7 @@ span.hidden-lg.hidden-xs.hidden-sm.hidden-xxs {
   transform: rotate(15deg);
 }
 
-/* line 506, assets/style/sass/_partials/_main.scss */
+/* line 507, assets/style/sass/_partials/_main.scss */
 .greenInset.blue img {
   float: right;
   position: relative;
@@ -19141,49 +19142,49 @@ span.hidden-lg.hidden-xs.hidden-sm.hidden-xxs {
   transform: none;
 }
 
-/* line 518, assets/style/sass/_partials/_main.scss */
+/* line 519, assets/style/sass/_partials/_main.scss */
 .greenInset.blue a {
   color: #44B5A6 !important;
 }
 
-/* line 521, assets/style/sass/_partials/_main.scss */
+/* line 522, assets/style/sass/_partials/_main.scss */
 .greenInset.blue a:hover {
   color: #ffffff !important;
 }
 
-/* line 524, assets/style/sass/_partials/_main.scss */
+/* line 525, assets/style/sass/_partials/_main.scss */
 img.siteLarge {
   max-width: 100% !important;
 }
 
-/* line 528, assets/style/sass/_partials/_main.scss */
+/* line 529, assets/style/sass/_partials/_main.scss */
 h2.siteLarge {
   margin-top: -25px !important;
   margin-bottom: -30px !important;
 }
 
-/* line 533, assets/style/sass/_partials/_main.scss */
+/* line 534, assets/style/sass/_partials/_main.scss */
 h3.siteLarge {
   margin-bottom: -15px !important;
   margin-top: -10px !important;
 }
 
-/* line 538, assets/style/sass/_partials/_main.scss */
+/* line 539, assets/style/sass/_partials/_main.scss */
 a.button.front, .nav-footer a.front {
   background: linear-gradient(to bottom, #a2b801, #80900d) !important;
 }
 
-/* line 543, assets/style/sass/_partials/_main.scss */
+/* line 544, assets/style/sass/_partials/_main.scss */
 #event a {
   border: none !important;
 }
 
-/* line 546, assets/style/sass/_partials/_main.scss */
+/* line 547, assets/style/sass/_partials/_main.scss */
 #event a:hover {
   background: none !important;
 }
 
-/* line 550, assets/style/sass/_partials/_main.scss */
+/* line 551, assets/style/sass/_partials/_main.scss */
 a {
   font-weight: 600;
   border-bottom: solid 2px transparent;
@@ -19193,24 +19194,24 @@ a {
   transition: 0.3s ease all;
 }
 
-/* line 558, assets/style/sass/_partials/_main.scss */
+/* line 559, assets/style/sass/_partials/_main.scss */
 p a:hover, .main-indent ul li a:hover {
   color: #2a6496;
   border-bottom: 2px solid #0dbdee;
 }
 
-/* line 563, assets/style/sass/_partials/_main.scss */
+/* line 564, assets/style/sass/_partials/_main.scss */
 ul ul, ol ul, ul ol, ol ol {
   margin-bottom: -17px;
   margin-top: 14px !important;
 }
 
-/* line 568, assets/style/sass/_partials/_main.scss */
+/* line 569, assets/style/sass/_partials/_main.scss */
 ul ul, ol ul {
   list-style: circle !important;
 }
 
-/* line 574, assets/style/sass/_partials/_main.scss */
+/* line 575, assets/style/sass/_partials/_main.scss */
 #stickyFooterContainer {
   z-index: 100000    !important;
   position: fixed !important;
@@ -19218,86 +19219,86 @@ ul ul, ol ul {
   width: 100% !important;
 }
 
-/* line 580, assets/style/sass/_partials/_main.scss */
+/* line 581, assets/style/sass/_partials/_main.scss */
 .container.mainContent {
   padding-bottom: 150px;
 }
 
 @media (min-width: 992px) {
-  /* line 584, assets/style/sass/_partials/_main.scss */
+  /* line 585, assets/style/sass/_partials/_main.scss */
   .footer.frontpage .nav-footer a {
     font-size: 3em;
   }
 }
 
-/* line 592, assets/style/sass/_partials/_main.scss */
+/* line 593, assets/style/sass/_partials/_main.scss */
 .nav-reasons-title {
   bottom: -37px !important;
   font-size: 30px !important;
 }
 
-/* line 597, assets/style/sass/_partials/_main.scss */
+/* line 598, assets/style/sass/_partials/_main.scss */
 .pro-sidebar {
   top: -2350px;
   position: relative;
   right: 0px;
   width: 275px;
 }
-/* line 602, assets/style/sass/_partials/_main.scss */
+/* line 603, assets/style/sass/_partials/_main.scss */
 .pro-sidebar .module {
   width: 252px !important;
 }
 
-/* line 608, assets/style/sass/_partials/_main.scss */
+/* line 609, assets/style/sass/_partials/_main.scss */
 form.gplaceholder .large {
   width: 100%;
 }
-/* line 611, assets/style/sass/_partials/_main.scss */
+/* line 612, assets/style/sass/_partials/_main.scss */
 form.gplaceholder #input_5_2_4_label, form.gplaceholder #input_4_2_4_label {
   display: none;
 }
-/* line 614, assets/style/sass/_partials/_main.scss */
+/* line 615, assets/style/sass/_partials/_main.scss */
 form.gplaceholder #input_5_2_5, form.gplaceholder #input_4_2_5 {
   width: 100%;
 }
-/* line 620, assets/style/sass/_partials/_main.scss */
+/* line 621, assets/style/sass/_partials/_main.scss */
 form.gplaceholder #field_5_2 input#input_5_2_1, form.gplaceholder #field_5_2 input#input_4_1_3, form.gplaceholder #field_5_2 input#input_5_1_3, form.gplaceholder #field_5_2 input#input_4_2_1, form.gplaceholder #field_5_2 input#input_6_1_3, form.gplaceholder #field_4_1 input#input_5_2_1, form.gplaceholder #field_4_1 input#input_4_1_3, form.gplaceholder #field_4_1 input#input_5_1_3, form.gplaceholder #field_4_1 input#input_4_2_1, form.gplaceholder #field_4_1 input#input_6_1_3, form.gplaceholder #field_4_2 input#input_5_2_1, form.gplaceholder #field_4_2 input#input_4_1_3, form.gplaceholder #field_4_2 input#input_5_1_3, form.gplaceholder #field_4_2 input#input_4_2_1, form.gplaceholder #field_4_2 input#input_6_1_3, form.gplaceholder #field_5_1 input#input_5_2_1, form.gplaceholder #field_5_1 input#input_4_1_3, form.gplaceholder #field_5_1 input#input_5_1_3, form.gplaceholder #field_5_1 input#input_4_2_1, form.gplaceholder #field_5_1 input#input_6_1_3, form.gplaceholder #field_6_1 input#input_5_2_1, form.gplaceholder #field_6_1 input#input_4_1_3, form.gplaceholder #field_6_1 input#input_5_1_3, form.gplaceholder #field_6_1 input#input_4_2_1, form.gplaceholder #field_6_1 input#input_6_1_3 {
   margin-right: 1% !important;
   width: 48% !important;
 }
-/* line 624, assets/style/sass/_partials/_main.scss */
+/* line 625, assets/style/sass/_partials/_main.scss */
 form.gplaceholder #field_5_2 input#input_5_2_3, form.gplaceholder #field_5_2 input#input_4_1_6, form.gplaceholder #field_5_2 input#input_5_1_6, form.gplaceholder #field_5_2 input#input_4_2_3, form.gplaceholder #field_5_2 input#input_6_1_6, form.gplaceholder #field_4_1 input#input_5_2_3, form.gplaceholder #field_4_1 input#input_4_1_6, form.gplaceholder #field_4_1 input#input_5_1_6, form.gplaceholder #field_4_1 input#input_4_2_3, form.gplaceholder #field_4_1 input#input_6_1_6, form.gplaceholder #field_4_2 input#input_5_2_3, form.gplaceholder #field_4_2 input#input_4_1_6, form.gplaceholder #field_4_2 input#input_5_1_6, form.gplaceholder #field_4_2 input#input_4_2_3, form.gplaceholder #field_4_2 input#input_6_1_6, form.gplaceholder #field_5_1 input#input_5_2_3, form.gplaceholder #field_5_1 input#input_4_1_6, form.gplaceholder #field_5_1 input#input_5_1_6, form.gplaceholder #field_5_1 input#input_4_2_3, form.gplaceholder #field_5_1 input#input_6_1_6, form.gplaceholder #field_6_1 input#input_5_2_3, form.gplaceholder #field_6_1 input#input_4_1_6, form.gplaceholder #field_6_1 input#input_5_1_6, form.gplaceholder #field_6_1 input#input_4_2_3, form.gplaceholder #field_6_1 input#input_6_1_6 {
   width: 50% !important;
   margin-right: 0 !important;
 }
-/* line 631, assets/style/sass/_partials/_main.scss */
+/* line 632, assets/style/sass/_partials/_main.scss */
 form.gplaceholder ul {
   list-style: none !important;
   padding-left: 0 !important;
   margin-left: 0 !important;
 }
-/* line 639, assets/style/sass/_partials/_main.scss */
+/* line 640, assets/style/sass/_partials/_main.scss */
 form.gplaceholder select {
   margin-bottom: 5px;
   border-radius: 5px !important;
   border: 2px solid #CEDFEF;
   padding: 5px;
 }
-/* line 645, assets/style/sass/_partials/_main.scss */
+/* line 646, assets/style/sass/_partials/_main.scss */
 form.gplaceholder label {
   margin-right: 5px;
 }
-/* line 648, assets/style/sass/_partials/_main.scss */
+/* line 649, assets/style/sass/_partials/_main.scss */
 form.gplaceholder textarea {
   border: 2px solid #CEDFEF;
   padding: 5px;
 }
-/* line 652, assets/style/sass/_partials/_main.scss */
+/* line 653, assets/style/sass/_partials/_main.scss */
 form.gplaceholder input {
   margin-bottom: 5px;
   border-radius: 5px !important;
 }
-/* line 656, assets/style/sass/_partials/_main.scss */
+/* line 657, assets/style/sass/_partials/_main.scss */
 form.gplaceholder input[type="submit"] {
   color: #ffffff !important;
   background: #0dbdee !important;
@@ -19306,31 +19307,31 @@ form.gplaceholder input[type="submit"] {
   padding-left: 50px;
   padding-right: 50px;
 }
-/* line 664, assets/style/sass/_partials/_main.scss */
+/* line 665, assets/style/sass/_partials/_main.scss */
 form.gplaceholder input[type="submit"]#gform_submit_button_5 {
   top: -80px !important;
   position: relative;
 }
-/* line 668, assets/style/sass/_partials/_main.scss */
+/* line 669, assets/style/sass/_partials/_main.scss */
 form.gplaceholder input[type="submit"]:hover {
   background: #1d536f !important;
 }
-/* line 673, assets/style/sass/_partials/_main.scss */
+/* line 674, assets/style/sass/_partials/_main.scss */
 form.gplaceholder input[type="text"], form.gplaceholder input[type="tel"], form.gplaceholder input[type="email"] {
   border: 2px solid #CEDFEF;
   padding: 5px;
 }
-/* line 678, assets/style/sass/_partials/_main.scss */
+/* line 679, assets/style/sass/_partials/_main.scss */
 form.gplaceholder .gform_validation_container {
   visibility: hidden;
 }
 
-/* line 683, assets/style/sass/_partials/_main.scss */
+/* line 684, assets/style/sass/_partials/_main.scss */
 a.link-audio, label.link-audio {
   display: block;
   margin-bottom: 15px;
 }
-/* line 686, assets/style/sass/_partials/_main.scss */
+/* line 687, assets/style/sass/_partials/_main.scss */
 a.link-audio:before, label.link-audio:before {
   content: "\f001";
   font-family: FontAwesome;
@@ -19338,12 +19339,12 @@ a.link-audio:before, label.link-audio:before {
   color: #0dbdee;
   padding-right: 14px;
 }
-/* line 696, assets/style/sass/_partials/_main.scss */
+/* line 697, assets/style/sass/_partials/_main.scss */
 a.link-pdf, label.link-pdf {
   display: block;
   margin-bottom: 15px;
 }
-/* line 699, assets/style/sass/_partials/_main.scss */
+/* line 700, assets/style/sass/_partials/_main.scss */
 a.link-pdf:before, label.link-pdf:before {
   content: "\f15c";
   font-family: FontAwesome;
@@ -19351,12 +19352,12 @@ a.link-pdf:before, label.link-pdf:before {
   color: #0dbdee;
   padding-right: 14px;
 }
-/* line 709, assets/style/sass/_partials/_main.scss */
+/* line 710, assets/style/sass/_partials/_main.scss */
 a.link-download, label.link-download {
   display: block;
   margin-bottom: 15px;
 }
-/* line 712, assets/style/sass/_partials/_main.scss */
+/* line 713, assets/style/sass/_partials/_main.scss */
 a.link-download:before, label.link-download:before {
   content: "\f019";
   font-family: FontAwesome;
@@ -19365,7 +19366,7 @@ a.link-download:before, label.link-download:before {
   padding-right: 14px;
 }
 
-/* line 726, assets/style/sass/_partials/_main.scss */
+/* line 727, assets/style/sass/_partials/_main.scss */
 .people {
   display: block;
   margin-top: 20px;
