@@ -133,7 +133,7 @@ article.results .button{
 
 select {
      background: url("assets/img/module-link.jpg") no-repeat 95%;
-     background-size: 3% 54% ;
+     //background-size: cover ;
    border: 2px solid #CEDFEF;
     border-radius: 12px;
     color: #1D536F;
@@ -254,9 +254,17 @@ ul.gform_fields{
 .gfield_radio{
     margin-top:0 !important;
 }
-.collapseomatic_excerpt, .collapseomatic_content {
+.collapseomatic_excerpt{
     margin-bottom: -40px;
 
+}
+.collapseomatic_content{
+     margin-bottom: 0px;
+     ul{
+         margin-top:0px !important;
+         padding-left: 2em !important;
+     }
+     margin-top:10px !important;
 }
 .link-download, .link-audio, .link-pdf{
     padding-top: 5px;
@@ -579,7 +587,7 @@ ul ul, ol ul, ul ol, ol ol {
     width: 100% !important;
 }
 .container.mainContent{
-    padding-bottom:150px;
+    padding-bottom:170px;
 }
 .footer.frontpage{
     .nav-footer a{
@@ -654,21 +662,11 @@ form.gplaceholder{
         margin-bottom: 5px;
        // margin-right:5px;
         border-radius: 5px !important;
+        
         &[type="submit"]{
-            color: $white !important;
-            background: $cyan !important;
-            border:none !important;
-            padding: 15px;
-            padding-left: 50px;
-            padding-right: 50px;
-           
-            &#gform_submit_button_5{
-                 top: -80px !important;
-                position: relative;
-            }
+            background:$white;
             &:hover{
-                background:$blue !important;
-
+                background:$violet;
             }
         }
         &[type="text"], &[type="tel"], &[type="email"]{
@@ -682,43 +680,23 @@ form.gplaceholder{
 }
 a, label{
     &.link-audio{
-        display: block;
-        margin-bottom: 15px;
-        &:before{
-            content: "\f001";
-            font:{
-                family:FontAwesome;
-                size:30px;
-            }
-            color:$cyan;
-            padding-right:14px;
-        }
+        padding-left: 50px;
+        margin-bottom: 20px;
+        background:url("assets/img/icon-link-audio.png") 0 0 no-repeat;
+            display: inline-block;
+        
     }
     &.link-pdf{
-        display: block;
-        margin-bottom: 15px;
-         &:before{
-            content: "\f15c";
-             font:{
-                family:FontAwesome;
-                size:30px;
-            }
-            color:$cyan;
-            padding-right:14px;
-        }
+         padding-left: 50px;
+        margin-bottom: 20px;
+        background:url("assets/img/icon-link-pdf.png") 0 0 no-repeat;
+            display: inline-block;
     }
     &.link-download{
-        display: block;
-        margin-bottom: 15px;
-         &:before{
-            content: "\f019";
-             font:{
-                family:FontAwesome;
-                size:30px;
-            }
-            color:$cyan;
-            padding-right:14px;
-        }
+         padding-left: 50px;
+        margin-bottom: 20px;
+        background:url("assets/img/icon-link-download.png") 0 0 no-repeat;
+            display: inline-block;
     }
 }
 

@@ -10,11 +10,15 @@
 		size: 1.625em;
 		weight: 300;
 	}
-	line-height: 1.2em;
+	line-height: 1.4em;
+	    padding-left: 10px;
+    padding-right: 25px;
+
 }
 
 .stories-quotes{
 	border-top: solid 6px $cyan;
+
 }
 
 .stories-quote{
@@ -28,8 +32,11 @@
 	}
 
 	p{
-		font-size: 1.625em;
+		/*font-size: 1.625em;
 		line-height: 1.325em;
+		*/
+		font-size: 1.15em;
+    	line-height: 1.5em;
 	}
 
 	.stories-quote-cite{
@@ -70,7 +77,8 @@ h2.stories-tips-header{
 	padding-bottom: 1em;
 
 	p{
-		line-height: 1.2em;
+		//line-height: 1.2em;
+		line-height: 1.4em;
 		font:{
 			weight: bold;
 			size: 1.125em;
