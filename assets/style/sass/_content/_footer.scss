@@ -24,7 +24,7 @@
 		@include button-color($violet);
 
 		&:after{
-			content: '(800)QUIT-NOW';
+			content: '1(800)QUIT-NOW';
 			position: absolute;
 			left: 0; 
 			bottom: -30px; 
@@ -110,7 +110,7 @@
 
 		a{
 			padding-top: 0.5em;
-			padding-bottom: 5.5em;
+			padding-bottom: 5em;
 
 			small{ display: block; }
 		}

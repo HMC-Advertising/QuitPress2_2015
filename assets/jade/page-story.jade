@@ -6,16 +6,15 @@
 		div(class="container ")
 			header(class="col-lg-12 stories-header")
 				- $hl; // this is for the copy issues. Instead dealing with the buttons and the like, this just lookes up the title name then output for it. 
-				
-				- if(get_the_title() ==  "Wellness" ): 
-					- $hl ='Real tips, tools, and stories to help when <strong>Quitting for your Wellness</strong>';
-				- elseif(get_the_title() ==  "Illness" ): 
-					- $hl ='Real tips, tools, and stories to help when <strong>Quitting for your Illness</strong>';
-				- elseif(get_the_title() ==   "Baby"):
-					- $hl ='Real tips, tools, and stories to help when <strong>Quitting for your Baby</strong>';
-				- elseif(get_the_title() ==   "Family"):
+				- if(get_the_title() ==  "Quit to improve your health" ): 
+					- $hl ='Real tips, tools, and stories to help when <strong>Quitting to improve your Health</strong>';
+				- elseif(get_the_title() ==  "Quit because of an illness" ): 
+					- $hl ='Real tips, tools, and stories to help when <strong>Quitting because of an Illness</strong>';
+				- elseif(get_the_title() ==   "Quit for the health of a baby"):
+					- $hl ='Real tips, tools, and stories to help when <strong>Quitting for the Health of a Baby</strong>';
+				- elseif(get_the_title() ==   "Quit for your family"):
 					- $hl ='Real tips, tools, and stories to help when <strong>Quitting for your Family</strong>';
-				- elseif(get_the_title() ==   "Loss"):
+				- elseif(get_the_title() ==   "Quit to honor a lost loved one"):
 					- $hl ='Real tips, tools, and stories to help when <strong>Quitting for your Lost Loved One</strong>';
 				- else:
 					- $hl ='Real tips, tools, and stories to help when <strong>Quitting to save Money</strong>';
@@ -104,5 +103,19 @@
 					- endif;
 		
 - endwhile; endif; get_footer(); 
+
+-// if(get_the_title() ==  "Quit to improve your health" ): 
+					- //$hl ='Real tips, tools, and stories to help when <strong>Quitting for your Wellness</strong>';
+				- //elseif(get_the_title() ==  "Quit because of an illness" ): 
+					- //$hl ='Real tips, tools, and stories to help when <strong>Quitting for your Illness</strong>';
+				-// elseif(get_the_title() ==   "Quit for the health of a baby"):
+					- //$hl ='Real tips, tools, and stories to help when <strong>Quitting for your Baby</strong>';
+				- //elseif(get_the_title() ==   "Quit for your family"):
+					- //$hl ='Real tips, tools, and stories to help when <strong>Quitting for your Family</strong>';
+				- //elseif(get_the_title() ==   "Quit to honor a lost loved one"):
+					- //$hl ='Real tips, tools, and stories to help when <strong>Quitting for your Lost Loved One</strong>';
+				- //else:
+					- //$hl ='Real tips, tools, and stories to help when <strong>Quitting to save Money</strong>';
+				- //endif;
 
 

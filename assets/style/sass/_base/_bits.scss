@@ -47,6 +47,14 @@ $white: #ffffff;
 	}
 }
 
+@mixin med($point) {
+	
+		@media (max-width: 767px) { @content; }
+	
+	
+	
+}
+
 /******************************
 = Retina
 ******************************/

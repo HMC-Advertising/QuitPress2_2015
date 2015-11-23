@@ -4,11 +4,11 @@ body{
 }
 
 .nav-footer .item-phone a:after {
-   bottom: -10px;
+   bottom: -20px;
     content: "(800) QUIT-NOW";
     font-size: 0.8em;
 
-    margin: auto;
+    margin: auto; 
     position: absolute;
 
     text-align: center;
@@ -416,7 +416,12 @@ hr.search {
     margin-left: 12px;
     margin-top: 8px;
     padding: 0;
-    width: auto;
+    width:auto;
+    @include breakpoint(desktop) {
+        width: 411px;
+    }
+    text-align: center;
+    display: block;
     font-size: 1.2em;
 }
 @media(max-width: 1040px){
@@ -564,7 +569,7 @@ a{
     -o-transition: 0.3s ease all;
     transition: 0.3s ease all;
 }
-p a:hover, .main-indent ul li a:hover{
+p a:hover, .main-indent ul li a:hover, ol li a:hover{
     color:#2a6496;
     border-bottom:2px solid #0dbdee;
 }
@@ -573,10 +578,10 @@ ul ul, ol ul, ul ol, ol ol {
   margin-bottom: -17px;
   margin-top: 14px !important;
 
-  }
-  ul ul, ol ul{
+}  
+ul ul, ol ul{
     list-style: circle !important;
-  }
+}
 
 
 
@@ -586,23 +591,49 @@ ul ul, ol ul, ul ol, ol ol {
     bottom: 0 !important;
     width: 100% !important;
 }
+
 .container.mainContent{
     padding-bottom:170px;
 }
 .footer.frontpage{
     .nav-footer a{
         @include breakpoint(desktop) {
-            font-size:3em;
+            font-size:2.75em;
         }
     }
 }
 
 
-    .nav-reasons-title{
+.nav-reasons-title{
         bottom:-37px !important;
         font-size:30px !important;
+} 
+#main-container{
+    .nav-reasons-title{
+        bottom:15px !important;
+        font-size:24px !important;
+        line-height: 25px !important;
+        position: relative;
     } 
+    @include med(tablet){
+        .nav-reasons{
+            margin-top:20px;
+            ul{
+                li{
+                    margin-bottom: 83px;
+                    a{
+                        .nav-reasons-title{
+                            bottom:-7px !important;
+                            font-size: 22px !important;
+                            line-height: 22px !important;
+                        }
 
+                    }
+                }
+            }
+        }
+    }
+}
 .pro-sidebar{
     top: -2350px;
     position: relative;
