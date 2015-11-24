@@ -6,12 +6,9 @@ main(class="col-lg-12")
 	div(class="stories-quotes")
 		- if (have_posts()) : while (have_posts()) : the_post(); 
 		blockquote(class="stories-quote aq")
-			p != "<?php the_field('quote'); ?>"
+			p "<?php the_field('quote'); ?>"
 			div(class="left")
-				span(class="stories-quote-cite")
-					strong
-						- the_field('name'); 
-					- the_field('location');  
+				span(class="stories-quote-cite") <strong> <?php the_field('name'); ?></strong><?php the_field('location');  ?>
 		
 		- endwhile; posts_nav_link('--','Previous','Next'); endif; 
 	

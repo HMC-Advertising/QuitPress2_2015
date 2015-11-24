@@ -50,9 +50,7 @@
 										blockquote(class="stories-quote q")
 											p  <?php the_field('quote'); ?>
 											div(style="float:left" class="left")
-												span(class="stories-quote-cite")
-													strong  <?php the_field('name'); ?>
-													- the_field('location'); 
+												span(class="stories-quote-cite") <strong> <?php the_field('name'); ?></strong><?php the_field('location');  ?> 
 												
 											div(style="float:right" class="right")
 												a(href!="<?php the_permalink(); ?>" class="button") Read More
@@ -60,9 +58,7 @@
 									- else: 
 										blockquote(class="stories-quote f")
 											p <?php echo  $content; ?>
-											span(class="stories-quote-cite")
-												strong <?php the_field('name'); ?>
-												<?php the_field('location'); ?>
+											span(class="stories-quote-cite") <strong> <?php the_field('name'); ?></strong><?php the_field('location');  ?>
 											
 									- endif;
 								- else: 
@@ -70,18 +66,14 @@
 										blockquote(class="stories-quote q")
 											p <?php the_field('quote'); ?>
 											div(style="float:left" class="left")
-												span(class="stories-quote-cite")
-													strong <?php the_field('name'); ?>
-													- the_field('location'); 
+												span(class="stories-quote-cite") <strong> <?php the_field('name'); ?></strong><?php the_field('location');  ?>
 											div(style="float:right" class="right")
 												a(href!="<?php the_permalink(); ?>" class="button") Read More
 											
 									- else:  			
 										blockquote(class="stories-quote f")
 											p "<?php echo  $content; ?>"
-											span(class="stories-quote-cite")
-												strong <?php the_field('name'); ?>
-												- the_field('location');
+											span(class="stories-quote-cite") <strong> <?php the_field('name'); ?></strong><?php the_field('location');  ?>
 									- endif;  
 								- endif;  
 								- wp_reset_postdata(); 

@@ -13,7 +13,7 @@
 					blockquote(class="stories-quote")
 						- $quote = get_field('quote');  if($quote) : 
 							p
-								- echo $quote; 
+								- echo '"'.$quote.'"'; 
 						- else: 
 							- the_content(); 
 						- endif; 
@@ -21,15 +21,15 @@
 						- $location = get_field('location'); 
 						- if($location || $name) : 
 							span(class="stories-quote-cite")
-							- if($name): 
-								strong <?php echo $name; ?> 
-							- endif; 
-							span
+								- if($name): 
+									strong <?php echo $name; ?> 
+								- endif; 
 								- echo $location; 
 							- endif; 
 							- if($quote) : 
 								a(href!="<?php the_permalink(); ?>" class="button") Read More
 						- endif; 
+						
 				- endwhile;  
 		- get_sidebar('stories-archive'); 
 - endif; wp_reset_postdata();  get_footer();  

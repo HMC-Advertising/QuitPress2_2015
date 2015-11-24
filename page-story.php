@@ -12,19 +12,19 @@
         <div class="stories-quotes"><?php foreach($quotes as $post): ?><?php setup_postdata($post);  ?><?php $quote = get_field('quote');  ?><?php $content = get_the_content();  ?><?php if((strpos($quote, '<iframe') !== FALSE) or strpos($content, '<iframe') !== FALSE):  ?><?php if($quote): ?>
           <blockquote class="stories-quote q">
             <p> <?php the_field('quote'); ?></p>
-            <div style="float:left" class="left"><span class="stories-quote-cite"><strong> <?php the_field('name'); ?></strong><?php the_field('location');  ?></span></div>
+            <div style="float:left" class="left"><span class="stories-quote-cite"><strong> <?php the_field('name'); ?></strong><?php the_field('location');  ?> </span></div>
             <div style="float:right" class="right"><a href="<?php the_permalink(); ?>" class="button">Read More</a></div>
           </blockquote><?php else:  ?>
           <blockquote class="stories-quote f">
-            <p><?php echo  $content; ?></p><span class="stories-quote-cite"><strong><?php the_field('name'); ?></strong><?php the_field('location'); ?></span>
+            <p><?php echo  $content; ?></p><span class="stories-quote-cite"><strong> <?php the_field('name'); ?></strong><?php the_field('location');  ?></span>
           </blockquote><?php endif; ?><?php else:  ?><?php if($quote):  ?>
           <blockquote class="stories-quote q">
             <p><?php the_field('quote'); ?></p>
-            <div style="float:left" class="left"><span class="stories-quote-cite"><strong><?php the_field('name'); ?></strong><?php the_field('location');  ?></span></div>
+            <div style="float:left" class="left"><span class="stories-quote-cite"><strong> <?php the_field('name'); ?></strong><?php the_field('location');  ?></span></div>
             <div style="float:right" class="right"><a href="<?php the_permalink(); ?>" class="button">Read More</a></div>
           </blockquote><?php else:  			 ?>
           <blockquote class="stories-quote f">
-            <p>"<?php echo  $content; ?>"</p><span class="stories-quote-cite"><strong><?php the_field('name'); ?></strong><?php the_field('location'); ?></span>
+            <p>"<?php echo  $content; ?>"</p><span class="stories-quote-cite"><strong> <?php the_field('name'); ?></strong><?php the_field('location');  ?></span>
           </blockquote><?php endif;   ?><?php endif;   ?><?php wp_reset_postdata();  ?><?php endforeach;  ?><a href="<?php $title_lower = strtolower(get_the_title()); echo home_url().'/real-stories/'.$title_lower; ?>" class="button-large">Read More Stories</a>
         </div>
       </div><?php endif;  ?><?php $tips = get_field('tips_and_tools'); ?>

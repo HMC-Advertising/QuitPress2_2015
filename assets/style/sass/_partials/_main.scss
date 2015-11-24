@@ -32,8 +32,6 @@ body{
     color:#4C768C !important;
 }
 
-code{   background: none !important;
-}
 .collapseomatic{
 
     font-size: 1.1em;
@@ -132,15 +130,14 @@ article.results .button{
 }
 
 select {
-     background: url("assets/img/module-link.jpg") no-repeat 95%;
+     //background: url("assets/img/module-link.jpg") no-repeat 95%;
      //background-size: cover ;
-   border: 2px solid #CEDFEF;
+    border: 2px solid #CEDFEF;
     border-radius: 12px;
     color: #1D536F;
     display: block;
     font-size: 1em;
     line-height: 1.5em;
-
     padding: 0px 0 0px 18px;
     width: 100%;
     text-indent: 0.01px; /* Removes default arrow from firefox*/
@@ -148,8 +145,40 @@ select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    content: "Country";
+    z-index: 10;
+   &:after{
+        
+   }
 
+}
+#gform_5{
+    .gform_footer{
+        margin-top: -90px;
+    }
+}
+.address_state, .ginput_container_select{
+    background-color: $white;
+    display: inline-block;
+    position: relative;
+    width:100%;
+    select{
+
+    }
+    &:after{
+        content:"\f054";
+        color:$blue-light;
+        font:{
+            family:FontAwesome;
+            size:20px;
+        }
+        position:absolute;
+        display: inline-block;
+        width:24px;
+        height:24px;
+        top: 9px;
+        right: -3px;
+        z-index: 5;
+    }
 }
 select::-ms-expand {
     display: none;
@@ -254,17 +283,27 @@ ul.gform_fields{
 .gfield_radio{
     margin-top:0 !important;
 }
-.collapseomatic_excerpt{
-    margin-bottom: -40px;
+.tip_container{
+    margin-top:-10px;
+    margin-bottom: 20px;
+    min-height: 48px;
+    overflow: auto;
+    .collapseomatic_excerpt{
+       // margin-bottom: -40px;
 
-}
-.collapseomatic_content{
-     margin-bottom: 0px;
-     ul{
-         margin-top:0px !important;
-         padding-left: 2em !important;
-     }
-     margin-top:10px !important;
+    }
+    .collapseomatic_content{
+         margin-bottom: 0px;
+         margin-top: 10px;
+         margin-left:0px;
+         border-bottom:thick solid $blue-light;
+         ul{
+             margin-top:0px !important;
+             padding-left: 24px !important;
+             list-style: disc !important;
+         }
+        // margin-top:10px !important;
+    }
 }
 .link-download, .link-audio, .link-pdf{
     padding-top: 5px;
