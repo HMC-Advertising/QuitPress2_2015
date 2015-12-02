@@ -55,6 +55,14 @@ $white: #ffffff;
 	
 }
 
+@mixin medw($point) {
+	
+		@media (max-width: $point) { @content; }
+	
+	
+	
+}
+
 /******************************
 = Retina
 ******************************/

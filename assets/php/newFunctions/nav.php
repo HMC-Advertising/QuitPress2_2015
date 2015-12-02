@@ -94,6 +94,26 @@ class page_list_with_icons_Mobile extends Walker_Page {
 
 		function start_el( &$output, $page, $depth = 0, $args = array(), $current_page = 0){
 			$title_lower = strtolower($page->post_title);
+			switch($title_lower){
+				case "quit to improve your health":
+					$title_lower = "wellness";
+					break;
+				case "quit because of an illness":
+					$title_lower ="illness";
+					break;
+				case "quit for the health of a baby":
+					$title_lower = "baby";
+					break;
+				case "quit for your family":
+					$title_lower ="family";
+					break;
+				case "quit to honor a lost loved one":
+					$title_lower ="loss";
+					break;
+				case "quit to save money":
+					$title_lower = "money";
+					break;					
+			}
 
 			if ( $depth )
 			        $indent = str_repeat("\t", $depth);

@@ -92,14 +92,15 @@ $(function(){var e=document.createElement("input");"placeholder"in e==0&&$("[pla
 (function($) {
 
 	// Plugins
-	$('.main').fitVids();
+	//$('.main').fitVids();
 
 	// Mobile Navigation
     $('#nav-main-open').on('click', function(e){
-    	var $this = $(this).toggleClass('is-active');
+    	var $this = $(this).toggleClass('show');
 
-        $('.header-nav-wrap').toggleClass('is-active');
+        $('.header-nav-wrap').toggleClass('show');
         e.preventDefault();
+        console.log("pressed");
     });
 
 

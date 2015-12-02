@@ -113,7 +113,7 @@
 					<?php else : ?>
 						</div>
 					<?php endif; ?>
-					<button id="nav-main-open" aria-hidden="true">Menu</button>
+					<button id="nav-main-open" aria-hidden="true" class="not-active">Menu</button>
 					<div class="header-nav-wrap">
 						<?php get_search_form(); ?>
 						<?php
