@@ -1,7 +1,14 @@
 
-		<?php if(is_front_page() ):
+		<?php if(is_front_page()):
 
-			 get_template_part("assets/php/templates/footer", "frontpage");  
+			 get_template_part("assets/php/templates/footer", "frontpage");
+			 ?>
+			 </div>
+			 <?php  
+			 get_template_part("assets/php/templates/footer", "copyright"); 
+		elseif(is_page('abtesting') ):
+			 get_template_part("assets/php/templates/footer", "copyright"); 
+		
 		else:
 			
 			get_template_part("assets/php/templates/footer","inter"); 
@@ -29,7 +36,7 @@
 		<?php wp_footer(); ?>
 		
 
-		<?php if(is_front_page() ): ?>
+		<?php if(is_front_page() or is_page('abtesting')): ?>
 			<script type="text/javascript">
 
 				if(/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ){

@@ -4,9 +4,29 @@
 	<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
 	<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
 	<head>
+		<?php if(is_front_page() ): ?>
+			<!-- Google Analytics Content Experiment code -->
+<script>function utmx_section(){}function utmx(){}(function(){var
+k='65378674-1',d=document,l=d.location,c=d.cookie;
+if(l.search.indexOf('utm_expid='+k)>0)return;
+function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
+indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
+length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
+'<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
+'://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
+'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
+valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
+'" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
+</script><script>utmx('url','A/B');</script>
+<!-- End of Google Analytics Content Experiment code -->
+
+ 
+
+		<?php endif; ?>	
+		
 		<meta charset="utf-8">
 		<title><?php 
-			if(is_front_page()) {
+			if(is_front_page() or is_page('abtesting') ) {
 				echo "802Quits | The Vermont Quit Smoking Resource"; 
 			} 
 			else { 
@@ -93,12 +113,14 @@
 <?php endif; ?>
 	</head>
 	
-	<body <?php body_class(); ?>>
+	<body <?php if(is_page('abtesting')) : echo ' class="home page page-id-116 page-template-default logged-in admin-bar desktop chrome customize-support" '; 
+		else: body_class(); 
+		endif; ?>>
 		<div id="main-container" class="row">
 			<div id="header-wrap" class="container">
 				<header id="header" class="header col-lg-12" role="banner">
 					
-					<?php if(is_front_page()) : ?>
+					<?php if(is_front_page() or is_page('abtesting') ) : ?>
 						<h1 class="logo">
 					<?php else: ?>
 						<div class="logo">
@@ -108,7 +130,7 @@
 						</a>
 						<span class="logo-tagline">You Can Quit.<br />We Can Help.</span>
 					
-					<?php if(is_front_page()) : ?>
+					<?php if(is_front_page() or is_page('abtesting')) : ?>
 						</h1>
 					<?php else : ?>
 						</div>
