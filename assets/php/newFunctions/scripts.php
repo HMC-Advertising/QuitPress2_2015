@@ -14,7 +14,7 @@ function theme_scripts() {
 	//scripts------------------------------------------------------------------
 	//header
 	wp_enqueue_script("jquery");
-	
+	wp_register_script( 'slick', get_template_directory_uri(). '/assets/script/plugin/slick/dist/slick.min.js', false, false, false );
 	
 
 
@@ -22,7 +22,7 @@ function theme_scripts() {
 
 	//in the footer
 	wp_register_script( 'name 2', 'url2', false, false, true );
-	wp_register_script( 'swipe', get_template_directory_uri(). '/assets/script/plugin/swipe.js', false, false, true );
+	//wp_register_script( 'swipe', get_template_directory_uri(). '/assets/script/plugin/swipe.js', false, false, true );
 	wp_register_script( 'cookie', get_template_directory_uri(). '/assets/script/plugin/scripts-ck.js', false, false, true );
 	wp_register_script( 'main-min', get_template_directory_uri(). '/assets/script/main.min.js', false, false, true );
 	wp_register_script( 'bootstrap', get_template_directory_uri(). '/assets/script/plugin/bootstrap/bootstrap.min.js', false, false, true );
@@ -31,7 +31,8 @@ function theme_scripts() {
 
 	//fontpage
 	if(is_front_page()):
-		wp_enqueue_script( 'swipe' );
+		//wp_enqueue_script( 'swipe' );
+		wp_enqueue_script('slick');
 		wp_enqueue_script( 'cookie' );
 	endif;	
 

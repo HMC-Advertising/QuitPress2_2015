@@ -1,7 +1,7 @@
 <?php get_header();  ?><?php if ( have_posts() ) : while ( have_posts() ) : the_post();  ?>
 <div class="container">
   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ta-center welcome-text">
-    <h2>Real Stories From Around <span class="hidden-lg hidden-xs hidden-sm hidden-xxs"<br></span> the 802</h2><?php if(is_ipad() or is_tablet()):   ?>
+    <h2>Real Stories From Around <span class="hidden-lg hidden-md hidden-xs hidden-sm hidden-xxs"><br></span> the 802</h2><?php if(is_ipad() or is_tablet()):   ?>
     <div class="chooseFromContainer M">
       <div class="chooseFrom M">
         <div class="right-triangle white"></div>

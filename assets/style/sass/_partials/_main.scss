@@ -113,6 +113,10 @@ code span:hover{
 }
 header.stories-header {
     margin-bottom: -40px;
+    @include respond(mobile){
+         margin-top: 40px;
+    }
+
     margin-top: -40px;
 }
 .fill {
@@ -825,3 +829,30 @@ display:block; margin-top:20px;height: auto;overflow: auto
     padding-bottom: 35px;
     position: relative;
 }
+
+@include respond(tablet){
+    .nav-footer {
+        a{
+            min-height: 177px;
+        }
+        .item-own a{
+            min-height: 0 !important;
+        }
+    } 
+    .chooseFromText {
+        width: 257px;
+    }
+   
+    .welcome-text h3 {
+        font-size: 1.25em;
+    }
+}
+ 
+
+
+
+
+
+
+
+
