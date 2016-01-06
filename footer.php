@@ -31,6 +31,7 @@
 				get_template_part("assets/php/templates/footer-baby3");
 			 endif; 
 		 endif; */ ?>	
+
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/script/plugin/swipe.js"></script>
 
 		<?php wp_footer(); ?>
@@ -39,10 +40,7 @@
 		<?php if(is_front_page() or is_page('abtesting')): ?>
 			<?php if(is_mobile()): ?>
 			<script type="text/javascript">
-
-				
-					window.mySwipe = new Swipe(document.getElementById('slider'));
-			
+				window.mySwipe = new Swipe(document.getElementById('slider'));
 			</script>
 
 			
@@ -50,11 +48,11 @@
 		<?php endif; ?>
 		
 
-		<?php if(is_page("taxonomy-stories.php")): ?>
-			
+		<?php if(is_page("taxonomy-stories.php") or is_page_template('page-story.php')): ?>
+			<?php if(is_mobile()): ?>
 			<script type="text/javascript">
 
-				if(/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ){
+				
 					window.mySwipe = new Swipe(document.getElementById('slider'),{
 					startSlide: <?php 
 						if(get_the_title() ==  "Wellness" ):
@@ -76,10 +74,10 @@
 							echo 5;
 						endif; ?>
 					});
-				}
+				
 
 			</script>
 		<?php endif; ?>	
-
+		<?php endif; ?>	
 	</body>
 </html>

@@ -3,16 +3,19 @@
 - $mobile_Icons = new page_list_with_icons_Mobile();
 
 - if(is_mobile()):
-	i(class="fa fa-caret-left" style="position: absolute;top: 50%; margin-top:-25px;left: 14px;font-size: 81px; color:#0DBDEE; z-index:100000000")
-	div(id="slider" class="nav-reasons swipe")
-		div(class!="grid<?php if(is_front_page() or is_page('abtesting')) echo ' parent';  ?> swipe-wrap")
-			-$stories_nav = array('post_type' => 'page', 'meta_key' => '_wp_page_template','meta_value' => 'page-story.php','title_li' => '','link_before' => '<span class="nav-reasons-title">','link_after' => '</span>','walker' => $mobile_Icons,'depth' => 0);
-			- wp_list_pages($stories_nav);
-	i(class="fa fa-caret-right" style="position: absolute; top: 50%; margin-top:-25px; right: 14px; font-size: 81px; color:#0DBDEE; z-index:100000000")
+	
+	div(class!="col-lg-12 <?php if(!is_front_page()){echo 'templateSliderMobile'; } ?>")
+		i(class="fa fa-caret-left" style="position: absolute;top: 50%; margin-top:-50px;left: 14px;font-size: 81px; color:#0DBDEE; z-index:100000000")
+		div(id="slider" class="nav-reasons swipe")
+			div(class!="grid<?php if(is_front_page() or is_page('abtesting')) echo ' parent';  ?> swipe-wrap")
+				-$stories_nav = array('post_type' => 'page', 'meta_key' => '_wp_page_template','meta_value' => 'page-story.php','title_li' => '','link_before' => '<span class="nav-reasons-title">','link_after' => '</span>','walker' => $mobile_Icons,'depth' => 0);
+				- wp_list_pages($stories_nav);
+		i(class="fa fa-caret-right" style="position: absolute; top: 50%; margin-top:-50px; right: 14px; font-size: 81px; color:#0DBDEE; z-index:100000000")
 
 - else :
+			
 	nav(class="nav-reasons") 
 		ul(class!="grid<?php if(is_front_page() or is_page('abtesting')) echo ' parent';  ?>")
 			-$stories_nav = array('post_type' => 'page', 'meta_key' => '_wp_page_template','meta_value'=> 'page-story.php','title_li' => '','link_before' => '<span class="nav-reasons-title">', 'link_after' => '</span>', 'walker' => $icon_list, 'depth' => 0);
-			- wp_list_pages($stories_nav);
+			- wp_list_pages($stories_nav); 
 - endif; 
