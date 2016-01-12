@@ -19510,32 +19510,36 @@ a.link-download, label.link-download {
   .nav-footer .item-own a {
     min-height: 0 !important;
   }
+  /* line 870, assets/style/sass/_partials/_main.scss */
+  .nav-footer .item-own a small {
+    font-size: 0.55em;
+  }
 
-  /* line 872, assets/style/sass/_partials/_main.scss */
+  /* line 875, assets/style/sass/_partials/_main.scss */
   .chooseFromText {
     width: 257px;
   }
 
-  /* line 876, assets/style/sass/_partials/_main.scss */
+  /* line 879, assets/style/sass/_partials/_main.scss */
   .welcome-text h3 {
     font-size: 1.25em;
   }
 
-  /* line 879, assets/style/sass/_partials/_main.scss */
+  /* line 882, assets/style/sass/_partials/_main.scss */
   .chooseFromContainer.M {
     margin-left: 16px;
   }
 }
-/* line 887, assets/style/sass/_partials/_main.scss */
+/* line 890, assets/style/sass/_partials/_main.scss */
 .nav-reasons ul {
   padding-left: 0;
   list-style: none;
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1050px) {
-  /* line 893, assets/style/sass/_partials/_main.scss */
+  /* line 896, assets/style/sass/_partials/_main.scss */
   .home .nav-footer a {
-    min-height: 178px;
+    min-height: 203px;
   }
 }
 @media only screen and (max-width: 400px) {

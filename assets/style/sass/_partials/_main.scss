@@ -867,6 +867,9 @@ display:block; margin-top:20px;height: auto;overflow: auto
         }
         .item-own a{
             min-height: 0 !important;
+            small{  
+                font-size: 0.55em;
+            }
         }
     } 
     .chooseFromText {
@@ -879,7 +882,7 @@ display:block; margin-top:20px;height: auto;overflow: auto
     .chooseFromContainer.M {
     margin-left: 16px;
     }
-    
+  
 
 }
  
@@ -891,7 +894,7 @@ display:block; margin-top:20px;height: auto;overflow: auto
  }
  @media only screen and (min-width: 769px) and (max-width: 1050px) {
  .home .nav-footer a{
-        min-height: 178px
+        min-height: 203px
     }
 }
 
