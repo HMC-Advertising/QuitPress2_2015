@@ -19500,36 +19500,40 @@ a.link-download, label.link-download {
 @media only screen and (min-width: 768px) and (max-width: 1050px) {
   /* line 862, assets/style/sass/_partials/_main.scss */
   .nav-footer a {
-    min-height: 135px;
+    min-height: 147px;
   }
-  /* line 865, assets/style/sass/_partials/_main.scss */
+  /* line 864, assets/style/sass/_partials/_main.scss */
+  .nav-footer a small {
+    font-size: 0.55em;
+  }
+  /* line 868, assets/style/sass/_partials/_main.scss */
   .nav-footer .item-own a {
     min-height: 0 !important;
   }
 
-  /* line 869, assets/style/sass/_partials/_main.scss */
+  /* line 872, assets/style/sass/_partials/_main.scss */
   .chooseFromText {
     width: 257px;
   }
 
-  /* line 873, assets/style/sass/_partials/_main.scss */
+  /* line 876, assets/style/sass/_partials/_main.scss */
   .welcome-text h3 {
     font-size: 1.25em;
   }
 
-  /* line 876, assets/style/sass/_partials/_main.scss */
+  /* line 879, assets/style/sass/_partials/_main.scss */
   .chooseFromContainer.M {
     margin-left: 16px;
   }
 }
-/* line 884, assets/style/sass/_partials/_main.scss */
+/* line 887, assets/style/sass/_partials/_main.scss */
 .nav-reasons ul {
   padding-left: 0;
   list-style: none;
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1050px) {
-  /* line 890, assets/style/sass/_partials/_main.scss */
+  /* line 893, assets/style/sass/_partials/_main.scss */
   .home .nav-footer a {
     min-height: 178px;
   }

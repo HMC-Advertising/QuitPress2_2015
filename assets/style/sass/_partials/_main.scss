@@ -860,7 +860,10 @@ display:block; margin-top:20px;height: auto;overflow: auto
 @include respond(tablet){
     .nav-footer {
         a{
-            min-height: 135px;
+            min-height: 147px;
+            small{
+                font-size:0.55em;
+            }
         }
         .item-own a{
             min-height: 0 !important;
