@@ -15,7 +15,11 @@
 							p
 								- echo '"'.$quote.'"'; 
 						- else: 
-							- the_content(); 
+							- if( strstr(get_the_content(), "[audio") or strstr(get_the_content(), "<div style") ):
+								- the_content();
+							- else :
+								- echo '<p>"'.get_the_content().'"</p>'; 
+							- endif;	
 						- endif; 
 						- $name = get_field('name'); 
 						- $location = get_field('location'); 
