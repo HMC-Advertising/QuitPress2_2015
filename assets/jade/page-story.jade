@@ -64,7 +64,7 @@
 								- else: 
 									- if($quote): 
 										blockquote(class="stories-quote q")
-											p <?php the_field('quote'); ?>
+											p "<?php the_field('quote'); ?>"
 											div(style="float:left" class="left")
 												span(class="stories-quote-cite") <strong> <?php the_field('name'); ?></strong><?php the_field('location');  ?>
 											div(style="float:right" class="right")
@@ -78,36 +78,24 @@
 								- endif;  
 								- wp_reset_postdata(); 
 							- endforeach; 
-							a(href!="<?php $title_lower = strtolower(get_the_title()); echo home_url().'/real-stories/'.$title_lower; ?>" class="button-large") Read More Stories
+							a(href!="<?php $title_lower = strtolower(get_the_title()); switch($title_lower){case 'quit to improve your health':$title_lower = 'wellness';break;case 'quit because of an illness':$title_lower ='illness';break;case 'quit for the health of a baby':$title_lower = 'baby';break;case 'quit for your family':$title_lower = 'family';break;case 'quit to honor a lost loved one':$title_lower = 'loss';break;case 'quit to save money':$title_lower = 'money';break;	}echo home_url().'/real-stories/'.$title_lower; ?>" class="button-large") Read More Stories
 					- endif; 
 					- $tips = get_field('tips_and_tools');
 				div(class="col-lg-3 col-md-3 col-sm-3")
 					- if($tips): 
 						aside(class="stories-tips")
 							h2(class="stories-tips-header") Tips &amp; Tools
-							- foreach($tips as $post): setup_postdata($post); endforeach;
-							div(class="stories-tip") 
-								- the_content(); 
-							- wp_reset_postdata();  
-						
-					
+							- foreach($tips as $post): setup_postdata($post); 
+								div(class="stories-tip") 
+									- the_content(); 
+							- endforeach;
+					- wp_reset_postdata();  
+
 						a(href!="<?php echo home_url();?>/resources/tips-and-tools/" class="button-large") Get More Tips &amp; Tools
 					- endif;
 		
 - endwhile; endif; get_footer(); 
 
--// if(get_the_title() ==  "Quit to improve your health" ): 
-					- //$hl ='Real tips, tools, and stories to help when <strong>Quitting for your Wellness</strong>';
-				- //elseif(get_the_title() ==  "Quit because of an illness" ): 
-					- //$hl ='Real tips, tools, and stories to help when <strong>Quitting for your Illness</strong>';
-				-// elseif(get_the_title() ==   "Quit for the health of a baby"):
-					- //$hl ='Real tips, tools, and stories to help when <strong>Quitting for your Baby</strong>';
-				- //elseif(get_the_title() ==   "Quit for your family"):
-					- //$hl ='Real tips, tools, and stories to help when <strong>Quitting for your Family</strong>';
-				- //elseif(get_the_title() ==   "Quit to honor a lost loved one"):
-					- //$hl ='Real tips, tools, and stories to help when <strong>Quitting for your Lost Loved One</strong>';
-				- //else:
-					- //$hl ='Real tips, tools, and stories to help when <strong>Quitting to save Money</strong>';
-				- //endif;
+
 
 
